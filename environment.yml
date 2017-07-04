@@ -23,6 +23,7 @@ dependencies:
   - pathlib2==2.3.0
   - pexpect==4.2.1
   - pickleshare==0.7.4
+  - profilehooks==1.9.0
   - prompt-toolkit==1.0.14
   - ptyprocess==0.5.2
   - pygments==2.2.0
