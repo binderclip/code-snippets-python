@@ -14,9 +14,12 @@ dependencies:
 - pip:
   - appnope==0.1.0
   - backports.shutil-get-terminal-size==1.0.0
+  - certifi==2017.4.17
+  - chardet==3.0.4
   - decorator==4.0.11
   - enum34==1.1.6
   - faker==0.7.17
+  - idna==2.5
   - ipaddress==1.0.18
   - ipython==5.4.1
   - ipython-genutils==0.2.0
@@ -27,13 +30,14 @@ dependencies:
   - prompt-toolkit==1.0.14
   - ptyprocess==0.5.2
   - pygments==2.2.0
+  - pymysql==0.7.11
   - python-dateutil==2.6.0
   - redis==2.10.5
+  - requests==2.18.1
   - scandir==1.5
   - schematics==2.0.1
   - simplegeneric==0.8.1
   - six==1.10.0
   - traitlets==4.3.2
+  - urllib3==1.21.1
   - wcwidth==0.1.7
-prefix: /Users/clip/miniconda3/envs/cspy2
-
