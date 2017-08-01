@@ -15,9 +15,23 @@ def split_unicode():
     print(template.split('-'))
 
 
+def sort_str():
+    print("===== sort_str =====")
+    str_list = [
+        "0802aaa",
+        "1202aa",
+        "0209aaa",
+        "0812ccc",
+        "0802ddd",
+    ]
+    str_list.sort()
+    print(str_list)
+
+
 def main():
     split_str()
     split_unicode()
+    sort_str()
 
 
 if __name__ == '__main__':
