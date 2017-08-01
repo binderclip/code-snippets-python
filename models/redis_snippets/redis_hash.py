@@ -14,6 +14,11 @@ def set_data():
     r.hset(hash_key, 'b', 'bb')
 
 
+def incr_data():
+    print('===== incr_data =====')
+    print('hincrby: {}'.format(r.hincrby(hash_key, 'n', 1)))
+
+
 def get_data():
     print('===== get_data =====')
     print('foo: {}'.format(r.hget(hash_key, 'foo')))
@@ -39,6 +44,7 @@ def set_hash_to_str():
 
 def main():
     set_data()
+    incr_data()
     get_data()
     rem_data()
     get_data()
