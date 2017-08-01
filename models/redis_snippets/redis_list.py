@@ -12,6 +12,9 @@ def push():
     r.rpush(list_key, 'e', 'f')
     r.lpush(list_key, 'c')
     r.lpush(list_key, 'b', 'a')
+    print("r.lrange: {}".format(r.lrange(list_key, 0, -1)))
+    print("r.llen: {}".format(r.llen(list_key)))
+    print("r.llen: {}".format(r.llen(list_key3)))
     print(r.lrange(list_key, 0, -1))
     r.lpush(list_key2, 'a')
 
