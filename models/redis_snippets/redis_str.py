@@ -29,7 +29,7 @@ def str_and_number():
     r.set('n', '1')
     print('n: {}'.format(r.get('n')))
     print('type n: {}'.format(type(r.get('n'))))
-    r.incr('n')
+    print('incr n: {}'.format(r.incr('n')))
     print('n: {}'.format(r.get('n')))
     # r.set('n', 1.1)
     # r.incr('n')     # value is not an integer or out of range
