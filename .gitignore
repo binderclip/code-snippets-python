@@ -191,3 +191,7 @@ ENV/
 /site
 
 # End of https://www.gitignore.io/api/macos,python,pycharm
+
+# config file
+/models/config_snippets/config/*_config.py
+!/models/config_snippets/config/sample_config.py
