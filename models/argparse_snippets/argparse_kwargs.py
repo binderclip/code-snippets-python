@@ -1,5 +1,10 @@
 # coding: utf-8
 import argparse
+import datetime
+
+
+def _datetime(d):
+    return datetime.datetime.strptime(d, '%Y-%m-%d %H:%M:%S')
 
 
 def main():
@@ -20,6 +25,7 @@ def main():
 
     parser.add_argument("--default", default="default")
     parser.add_argument("--type_int", type=int)
+    parser.add_argument("--type_datetime", type=_datetime)
     parser.add_argument("--choices", choices=["foo", "bar", "baz"])
     parser.add_argument("--required", required=True)
     parser.add_argument("--help_msg", help="this is my help msg")
@@ -36,6 +42,7 @@ def main():
     print("nx2: ", args.nx2)
     print("default: ", args.default)
     print("type_int: ", args.type_int)
+    print("type_datetime: ", args.type_datetime)
     print("choices: ", args.choices)
     print("required: ", args.required)
     print("help_msg: ", args.help_msg)
