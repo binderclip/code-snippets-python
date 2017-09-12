@@ -14,14 +14,14 @@ def main():
     # option_strings
     parser.add_argument("-d", dest="dest")
 
-    # parser.add_argument("--n0", nargs=0)  # store 的时候不能设置
-    parser.add_argument("--n1", nargs=1)    # None or [x]
-    parser.add_argument("--N1")             # None or x
+    # parser.add_argument("--n0", nargs=0)      # store 的时候不能设置
+    parser.add_argument("--n1", nargs=1)        # None or [x]
+    parser.add_argument("--N1")                 # None or x
     parser.add_argument("--n2", nargs=2)
-    # parser.add_argument("--n0", nargs=0)  # store 的时候不能设置
-    parser.add_argument("--nx0", nargs='?') # None or x
-    parser.add_argument("--nx1", nargs='+') # [x]
-    parser.add_argument("--nx2", nargs='*') # [] [x]
+    # parser.add_argument("--n0", nargs=0)      # store 的时候不能设置
+    parser.add_argument("--nx0", nargs='?')     # None or x
+    parser.add_argument("--nx1", nargs='+')     # [x]
+    parser.add_argument("--nx2", nargs='*')     # [] [x]
 
     parser.add_argument("--default", default="default")
     parser.add_argument("--type_int", type=int)
