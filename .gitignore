@@ -195,3 +195,6 @@ ENV/
 # config file
 /models/config_snippets/config/*_config.py
 !/models/config_snippets/config/sample_config.py
+
+# database file
+*.db
