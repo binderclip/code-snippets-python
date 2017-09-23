@@ -8,15 +8,15 @@ r = redis.StrictRedis(host='localhost', port=6379, db=0)
 
 def set_data():
     print('===== set_data =====')
-    r.hset(hash_key, 'foo', 'bar')
-    r.hset(hash_key, 'n', 100)
+    print('hset: {}'.format(r.hset(hash_key, 'foo', 'bar')))    # 返回值是是否新建
+    print('hset: {}'.format(r.hset(hash_key, 'n', 100)))
     r.hset(hash_key, 'a', 'aa')
     r.hset(hash_key, 'b', 'bb')
 
 
 def incr_data():
     print('===== incr_data =====')
-    print('hincrby: {}'.format(r.hincrby(hash_key, 'n', 1)))
+    print('hincrby: {}'.format(r.hincrby(hash_key, 'n', 1)))    # 返回值是增加后的值
 
 
 def get_data():
