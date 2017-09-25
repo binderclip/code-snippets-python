@@ -82,6 +82,7 @@ def get_markups(content, start_index=0):
         markups.append(markup)
     return markups, start_index
 
+
 def main():
     parse_whole_html()
     parse_part_html()
@@ -90,3 +91,6 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+
+# https://www.crummy.com/software/BeautifulSoup/bs4/doc/
