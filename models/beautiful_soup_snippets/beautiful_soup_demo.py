@@ -67,7 +67,6 @@ def get_markups(content, start_index=0):
     if isinstance(content, NavigableString):
         start_index += len(content)
         return [], start_index
-    # TODO: 确定剩下的是不是都是 tag 或 soup，且是不是可行
     _start_index = start_index
     markups = []
     for child in content.children:
