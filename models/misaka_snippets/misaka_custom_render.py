@@ -25,10 +25,12 @@ def main():
             # space-headers - 只将 # Title 转为 <header>
             #                 #Title 会保持原样
             extensions=('disable-indented-code', 'autolink', 'space-headers'))
-    print md('''some text
+    print md(u'''some text
 next line
 
-next para''')
+　
+
+next para''')   # 空行中央有一个全角空格
 
 
 if __name__ == '__main__':
