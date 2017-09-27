@@ -2,8 +2,8 @@
 
 
 def main():
-    print('  Hello\n\r')
-    print('  Hello\n\r'.strip())
+    print(repr('  Hello\n\r'))
+    print(repr('  Hello\n\r'.strip()))
     print('=== end ===')
 
 
