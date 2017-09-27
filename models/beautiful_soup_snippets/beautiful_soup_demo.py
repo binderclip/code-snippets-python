@@ -25,6 +25,9 @@ and they lived at the bottom of a well.</p>
     print("soup.title.name: {}".format(soup.title.name))
     print("soup.title.string: {}".format(soup.title.string))
     print("soup.title.parent.name: {}".format(soup.title.parent.name))
+    print("soup.a: {}".format(soup.a))
+    print("soup.a.name: {}".format(soup.a.name))
+    print("soup.a['href']: {}".format(soup.a['href']))
 
 
 def parse_part_html():
@@ -84,8 +87,8 @@ def get_markups(content, start_index=0):
 
 def main():
     parse_whole_html()
-    parse_part_html()
-    parse_part_html2()
+    # parse_part_html()
+    # parse_part_html2()
 
 
 if __name__ == '__main__':
