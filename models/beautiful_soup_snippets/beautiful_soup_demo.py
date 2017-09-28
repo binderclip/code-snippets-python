@@ -28,6 +28,7 @@ and they lived at the bottom of a well.</p>
     print("soup.a: {}".format(soup.a))
     print("soup.a.name: {}".format(soup.a.name))
     print("soup.a['href']: {}".format(soup.a['href']))
+    print("soup.a.get('href', ''): {}".format(soup.a.get('href', '').strip()))
 
 
 def parse_part_html():
