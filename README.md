@@ -34,7 +34,7 @@ $ source activate cspy2
 开发环境导出：
 
 ```
-$ conda env export > environment.yml
+$ conda env export | grep -v "^prefix: " > environment.yml
 ```
 
 线上对应更新：
