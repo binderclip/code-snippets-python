@@ -1,6 +1,7 @@
 # coding: utf-8
+import datetime
 from schematics.models import Model
-from schematics.types import StringType, IntType
+from schematics.types import StringType, IntType, DateTimeType, DecimalType
 
 
 class HelloSchematics(Model):
@@ -19,25 +20,82 @@ class MyDefault(Model):
     i3 = IntType(default=1)
 
 
+class MyFields(Model):
+
+    s = StringType(default="s")
+    d = DateTimeType(default=datetime.datetime.now)
+
+
+class MyValidate(Model):
+    city = StringType(required=True)
+    taken_at = DateTimeType(default=datetime.datetime.now)
+
+
 def hello():
     print("=== hello ===")
     hello_schematics = HelloSchematics({'foo': 'bar'})
-    print(hello_schematics.serialize())
     print(hello_schematics.to_native())
+    hello_schematics2 = HelloSchematics()
+    print(hello_schematics2.to_native())
+    hello_schematics2.foo = 'bar2'
+    print(hello_schematics2.to_native())
+    hello_schematics2.foo = 'bar3'
+    print(hello_schematics2.to_native())
+    hello_schematics2.foo2 = 'bar4'
+    print(hello_schematics2.to_native())
 
 
 def default_value():
-    print("=== my_default ===")
+    print("=== default_value ===")
     my_default = MyDefault()
-    print(my_default.serialize())
     print(my_default.to_native())
+
+
+def conversion():
+    print("=== conversion ===")
+    my_fields = MyFields()
+    print("serialize(): {}".format(my_fields.serialize()))
+    print("to_native(): {}".format(my_fields.to_native()))
+    print("to_primitive(): {}".format(my_fields.to_primitive()))
+
+
+def conversion2():
+    print("=== conversion2 ===")
+    dt_t = DateTimeType()
+    dt = dt_t.to_native('2013-08-31T02:21:21.486072')
+    print("type: {}, value: {}".format(type(dt), dt))
+    print("type: {}, value: {}".format(type(dt_t.to_primitive(dt)), dt_t.to_primitive(dt)))
+
+
+def validate():
+    print("=== validate ===")
+    my_validate = MyValidate()
+    # my_validate.validate()  # schematics.exceptions.DataError: {"city": ["This field is required."]}
+    my_validate.city = "BEIJING"
+    my_validate.validate()
+    my_validate.taken_at = 'x'
+    # my_validate.validate()
+    # schematics.exceptions.DataError: {"taken_at": ["Could not parse x. Should be ISO 8601 or timestamp."]}
+    my_validate.taken_at = datetime.datetime.now()
+    my_validate.validate()
+    print('validate pass')
+
+
+def validate_2():
+    print("=== validate_2 ===")
+    st = StringType(max_length=10)
+    st.to_native('this is longer than 10')
+    # st.validate('this is longer than 10')   # schematics.exceptions.ValidationError: ["String value is too long."]
 
 
 def main():
     hello()
     default_value()
+    conversion()
+    conversion2()
+    validate()
+    validate_2()
 
 
 if __name__ == '__main__':
     main()
-
