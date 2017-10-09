@@ -72,12 +72,19 @@ def sort_reverse_list():
     print(l)
 
 
+def list_index():
+    print("=== list_index ===")
+    l = ['a', 'b', 'c']
+    print(l.index('a'))
+
+
 def main():
     init_list()
     insert_append_and_extend_list()
     remove_pop_list()
     get_len_count_index_list()
     sort_reverse_list()
+    list_index()
 
 
 if __name__ == '__main__':

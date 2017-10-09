@@ -77,19 +77,35 @@ def get_markups(content, start_index=0):
         new_markups, start_index = get_markups(child, start_index)
         markups.extend(new_markups)
     if isinstance(content, Tag) and content.name in ('a', 'b'):
-        markup = {
+        markup = dict()
+        markup.update({
             "name": content.name,
             "start_index": _start_index
-        }
+        })
         markup['end_index'] = start_index
         markups.append(markup)
     return markups, start_index
 
 
+def parse_list_index():
+    print("=== parse_list_index ===")
+    html_doc = """
+    <ol>
+        <li>a</li>
+        <li>b</li>
+        <li>c</li>
+    </ol>
+    """
+    soup = BeautifulSoup(html_doc, 'html.parser')
+    print("soup.ol.contents: {}".format(soup.ol.contents))
+    print(soup.ol.find_all('li').index(soup.li))
+
+
 def main():
-    parse_whole_html()
+    # parse_whole_html()
     # parse_part_html()
     # parse_part_html2()
+    parse_list_index()
 
 
 if __name__ == '__main__':
