@@ -1,7 +1,7 @@
 # coding: utf-8
 import datetime
 from schematics.models import Model
-from schematics.types import StringType, IntType, DateTimeType, DecimalType
+from schematics.types import StringType, IntType, DateTimeType, ModelType
 
 
 class HelloSchematics(Model):
@@ -29,6 +29,16 @@ class MyFields(Model):
 class MyValidate(Model):
     city = StringType(required=True)
     taken_at = DateTimeType(default=datetime.datetime.now)
+
+
+class ModelDetail(Model):
+    detail1 = StringType()
+    detail2 = StringType()
+
+
+class MyModel(Model):
+    s = StringType()
+    detail = ModelType(ModelDetail)
 
 
 def hello():
@@ -88,6 +98,23 @@ def validate_2():
     # st.validate('this is longer than 10')   # schematics.exceptions.ValidationError: ["String value is too long."]
 
 
+def model_in_model():
+    print("=== model_in_model ===")
+    my_model = MyModel()
+    my_model.s = 'sss'
+    print(my_model.to_native())
+    print(my_model.to_primitive())
+    my_model.detail = {}
+    print(my_model.to_native())
+    print(my_model.to_primitive())
+    my_model.detail = {'detail1': 'd1'}
+    print(my_model.to_native())
+    print(my_model.to_primitive())
+    my_model.detail = ModelDetail({'detail2': 'd2'})
+    print(my_model.to_native())
+    print(my_model.to_primitive())
+
+
 def main():
     hello()
     default_value()
@@ -95,6 +122,7 @@ def main():
     conversion2()
     validate()
     validate_2()
+    model_in_model()
 
 
 if __name__ == '__main__':
