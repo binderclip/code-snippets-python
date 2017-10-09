@@ -113,6 +113,9 @@ def model_in_model():
     my_model.detail = ModelDetail({'detail2': 'd2'})
     print(my_model.to_native())
     print(my_model.to_primitive())
+    print(type(my_model.detail))
+    print(type(my_model.to_native()['detail']))
+    print(type(my_model.to_primitive()['detail']))
 
 
 def main():
