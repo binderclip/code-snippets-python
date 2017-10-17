@@ -78,6 +78,16 @@ def list_index():
     print(l.index('a'))
 
 
+def list_slice():
+    print("=== list_slice ===")
+    l = [1, 2, 3]
+    print(l[:1])
+    print(l[:5])
+    print(l[-1:])
+    print(l[-5:])
+    print(l[:-1])
+
+
 def main():
     init_list()
     insert_append_and_extend_list()
@@ -85,7 +95,10 @@ def main():
     get_len_count_index_list()
     sort_reverse_list()
     list_index()
+    list_slice()
 
 
 if __name__ == '__main__':
     main()
+
+# https://www.tutorialspoint.com/python/python_lists.htm
