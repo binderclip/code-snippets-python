@@ -27,6 +27,8 @@ def add_remove():
     s.add(4)
     s.remove(1)
     print(s)
+    print(s.pop())
+    print(s)
 
 
 def main():
