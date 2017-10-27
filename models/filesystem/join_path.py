@@ -10,7 +10,6 @@ def join_path(path_a, path_b):
     return os.path.join(path_a, path_b)
 
 
-
 def main():
     path_a = get_file_dir_path()
     path_b = "../common_text/foo.txt"
