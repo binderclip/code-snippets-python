@@ -5,6 +5,7 @@ def main():
     d = {
         'foo': 'bar'
     }
+    print(type(d.items()))
     for k, v in d.items():
         print('<{}: {}>'.format(k, v))
 
