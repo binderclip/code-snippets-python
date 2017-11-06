@@ -27,10 +27,12 @@ dependencies:
   - ipython-genutils==0.2.0
   - itsdangerous==0.24
   - misaka==2.1.0
+  - olefile==0.44
   - pathlib2==2.3.0
   - peewee==2.10.1
   - pexpect==4.2.1
   - pickleshare==0.7.4
+  - pillow==4.3.0
   - profilehooks==1.9.0
   - prompt-toolkit==1.0.14
   - ptyprocess==0.5.2
