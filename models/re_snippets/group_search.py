@@ -7,7 +7,7 @@ def group_search():
     s = '"Foo" and "bar" are on the way.'
     m = re.search(r'"(.*)" and "(.*)" are on the way\.', s)
     if m:
-        print('{} {}'.format(m.group(1), m.group(2)))
+        print('{} ||| {} {}'.format(m.group(0), m.group(1), m.group(2)))
     else:
         print('not found')
     s = '"张三"和"李四"在路上。'
