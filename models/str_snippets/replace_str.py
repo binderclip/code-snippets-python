@@ -3,6 +3,12 @@
 
 def replace_str():
     print('===== replace_str =====')
+    s1 = u"aba"
+    print('{} -> {}'.format(s1, s1.replace('a', 'A')))
+
+
+def replace_str_code_test():
+    print('===== replace_str_code_test =====')
     s1 = u"－－－"
     s2 = "－－－"
     print(u'{} -> {}'.format(s1, s1.replace(u'－', u'-')))
@@ -17,6 +23,7 @@ def replace_str():
 
 def main():
     replace_str()
+    replace_str_code_test()
 
 
 if __name__ == '__main__':

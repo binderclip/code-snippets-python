@@ -1,6 +1,7 @@
 # coding: utf-8
 import re
 
+
 def to_utf8(s):
     if isinstance(s, unicode):
         return s.encode('utf-8')
