@@ -35,6 +35,8 @@ def remove_pop_list():
     print('l.remove: {}'.format(l.remove('e')))   # 只删除第一次出现的，没有返回
     print(l)
     # l.remove('h')   # 删除不存在的会导致 ValueError
+    if 'h' in l:
+        l.remove('h')
     l.pop()
     print(l)
     l.pop(1)

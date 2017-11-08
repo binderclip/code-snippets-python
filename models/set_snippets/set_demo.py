@@ -26,6 +26,9 @@ def add_remove():
     s = set([1, 2, 3])
     s.add(4)
     s.remove(1)
+    # s.remove(11)    # KeyError: 11
+    if 11 in s:
+        s.remove(11)
     print(s)
     print(s.pop())
     print(s)
