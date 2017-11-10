@@ -2,7 +2,7 @@
 
 
 def init_list():
-    print("===== init_list =====")
+    print("=== init_list ===")
     l = list()
     print(l)
     l2 = []
@@ -14,7 +14,7 @@ def init_list():
 
 
 def insert_append_and_extend_list():
-    print("===== insert_append_and_extend_list =====")
+    print("=== insert_append_and_extend_list ===")
     l = ['e', 'g']
     l.insert(1, 'f')
     print(l)
@@ -29,7 +29,7 @@ def insert_append_and_extend_list():
 
 
 def remove_pop_list():
-    print("===== remove_pop_list =====")
+    print("=== remove_pop_list ===")
     l = ['a', 'b', 'c', 'd', 'e', 'e']
     print(l)
     print('l.remove: {}'.format(l.remove('e')))   # 只删除第一次出现的，没有返回
@@ -46,7 +46,7 @@ def remove_pop_list():
 
 
 def get_len_count_index_list():
-    print("===== get_len_count_index_list =====")
+    print("=== get_len_count_index_list ===")
     l = ['a', 'b', 'c', 'd', 'e', 'e']
     print(l[0])
     # print(l[10])    # IndexError: list index out of range
@@ -61,7 +61,7 @@ def get_len_count_index_list():
 
 
 def sort_reverse_list():
-    print("===== sort_reverse_list =====")
+    print("=== sort_reverse_list ===")
     l = ['e', 'b', 'c', 'a', 'f', 'd']
     print(l)
     print(l.sort())     # return None
@@ -72,6 +72,13 @@ def sort_reverse_list():
     print(l)
     print(list(reversed(l)))    # return a reversed iterator
     print(l)
+
+
+def sort_list():
+    print("=== sort_list ===")
+    l = [(1, 2), (3, 1), (2, 3)]
+    print(sorted(l, key=lambda x: x[1]))
+    print(sorted(l, key=lambda x: x[0]))
 
 
 def list_index():
@@ -96,6 +103,7 @@ def main():
     remove_pop_list()
     get_len_count_index_list()
     sort_reverse_list()
+    sort_list()
     list_index()
     list_slice()
 
