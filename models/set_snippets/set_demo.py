@@ -11,13 +11,15 @@ def init_set():
     print(s3)
 
 
-def union_add_intersection():
-    print("===== union_add_intersection =====")
+def union_update_and_intersection():
+    print("===== union_update_and_intersection =====")
     s = set([1, 2, 3])
     s2 = set([2, 3, 4])
     print(s.intersection(s2))
     print(s)
     print(s.union(s2))
+    print(s)
+    print(s.update(s2))
     print(s)
 
 
@@ -36,7 +38,7 @@ def add_remove():
 
 def main():
     init_set()
-    union_add_intersection()
+    union_update_and_intersection()
     add_remove()
 
 
