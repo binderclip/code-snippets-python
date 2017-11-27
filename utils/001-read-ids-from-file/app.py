@@ -6,7 +6,10 @@ def read_ids_from_file(ids_file):
     ids = []
     with open(ids_file) as f:
         for line in f.readlines():
-            ids.append(int(line.strip()))
+            _line = line.strip()
+            if not _line:
+                continue
+            ids.append(int(_line))
     return ids
 
 
@@ -18,7 +21,6 @@ def main():
     ids = read_ids_from_file(ids_file)
     print('{} ids'.format(len(ids)))
     print('{}...'.format(', '.join(map(str, ids[:10]))) if len(ids) > 10 else '{}'.format(', '.join(map(str, ids))))
-
 
 
 if __name__ == '__main__':
