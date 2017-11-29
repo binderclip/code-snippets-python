@@ -18,9 +18,36 @@ def dump_str_escape_test():
     print(s)
 
 
+def test_ensure_ascii():
+    print("=== test_ensure_ascii ===")
+    d = {'hello': '世界'}
+    print(simplejson.dumps(d))
+    print(simplejson.dumps(d, ensure_ascii=False))
+
+
+def test_pretty_printed():
+    print("=== test_pretty_printed ===")
+    d = {'a': {'b': 'c'}}
+    print(simplejson.dumps(d))
+    print(simplejson.dumps(d, indent=4))
+    print(simplejson.dumps(d, indent="    "))
+
+
+def test_compact_printed():
+    print("=== test_compact_printed ===")
+    d = {'a': {'b': ['c', 'd']}}
+    print(simplejson.dumps(d))
+    print(simplejson.dumps(d, separators=None))
+    print(simplejson.dumps(d, separators=(', ', ': ')))
+    print(simplejson.dumps(d, separators=(',', ':')))
+
+
 def main():
     dump_loads()
     dump_str_escape_test()
+    test_ensure_ascii()
+    test_pretty_printed()
+    test_compact_printed()
 
 
 if __name__ == '__main__':
