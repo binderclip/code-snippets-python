@@ -24,7 +24,7 @@ class QiniuClientError(Exception):
 
 class QiniuClient(object):
 
-    def __init__(self, access_key, secret_key, bucket, host, prefix='uuimgs/'):
+    def __init__(self, access_key, secret_key, bucket, host, prefix):
         self.access_key = access_key
         self.secret_key = secret_key
         self.bucket = bucket

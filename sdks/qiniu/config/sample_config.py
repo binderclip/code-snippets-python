@@ -7,3 +7,4 @@ class Config(object):
     SECRET_KEY = 'xxx'
     BUCKET = 'xxx'
     HOST = 'http://xxx'
+    PREFIX ='uuimgs/'
