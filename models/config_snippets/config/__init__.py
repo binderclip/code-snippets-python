@@ -10,7 +10,7 @@ app_config_module = __import__('config.{}'.format(app_config_file_name), fromlis
 
 CSConfig = app_config_module.Config
 
-# should export in shell: export CS_CONFIG=xxx_config
+# should set env: export CS_CONFIG=xxx_config
 # in gitignore:
 # #/models/config_snippets/config/*_config.py
 # !/models/config_snippets/config/sample_config.py
