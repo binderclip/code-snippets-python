@@ -3,7 +3,6 @@ import foo
 print('__name__ of __init__.py: {}'.format(__name__))
 
 
-
 def main():
     print('Hello')
 
