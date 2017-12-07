@@ -11,6 +11,8 @@ def main():
     with open(file_name) as f:
         url = qiniu_client.upload_img(f.read())
         print(url)
+    url2 = qiniu_client.upload_img_file(file_name)
+    print(url2)
 
 
 if __name__ == '__main__':

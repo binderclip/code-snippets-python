@@ -40,6 +40,7 @@ dependencies:
   - pygments==2.2.0
   - pymysql==0.7.11
   - python-dateutil==2.6.0
+  - qiniu==7.2.0
   - redis==2.10.5
   - requests==2.18.1
   - scandir==1.5
