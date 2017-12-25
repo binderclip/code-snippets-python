@@ -1,5 +1,6 @@
 # coding: utf-8
-from peewee import Model, CharField, DateField, BooleanField
+import datetime
+from peewee import *
 
 from playhouse.db_url import connect
 
@@ -9,7 +10,7 @@ MYSQL_PASSWORD = ""
 MYSQL_HOST = "localhost"
 MYSQL_PORT = 3306
 MYSQL_DB_NAME = "test_db"
-MYSQL_DB_URL = "mysql://{user}:{password}@{host}:{port}/{db_name}".format(
+MYSQL_DB_URL = "mysql://{user}:{password}@{host}:{port}/{db_name}?charset=utf8mb4".format(
     user=MYSQL_USER,
     password=MYSQL_PASSWORD,
     host=MYSQL_HOST,
@@ -22,7 +23,7 @@ db = connect(MYSQL_DB_URL)
 
 
 class Person(Model):
-    
+
     name = CharField()
     birthday = DateField()
     is_relative = BooleanField()
@@ -30,3 +31,10 @@ class Person(Model):
     class Meta:
         database = db
 
+
+class Ppp(Model):
+    name = CharField()
+    create_time = DateTimeField(default=datetime.datetime.now)
+
+    class Meta:
+        database = db
