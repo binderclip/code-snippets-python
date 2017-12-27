@@ -21,6 +21,8 @@ dependencies:
   - decorator==4.0.11
   - enum34==1.1.6
   - faker==0.7.17
+  - gevent==1.2.2
+  - greenlet==0.4.12
   - idna==2.5
   - ipaddress==1.0.18
   - ipython==5.4.1
