@@ -18,6 +18,7 @@ dependencies:
   - certifi==2017.4.17
   - cffi==1.11.0
   - chardet==3.0.4
+  - crypto==1.4.1
   - decorator==4.0.11
   - enum34==1.1.6
   - faker==0.7.17
@@ -29,6 +30,7 @@ dependencies:
   - ipython-genutils==0.2.0
   - itsdangerous==0.24
   - misaka==2.1.0
+  - naked==0.1.31
   - olefile==0.44
   - pathlib2==2.3.0
   - peewee==2.10.1
@@ -42,11 +44,13 @@ dependencies:
   - pygments==2.2.0
   - pymysql==0.7.11
   - python-dateutil==2.6.0
+  - pyyaml==3.12
   - qiniu==7.2.0
   - redis==2.10.5
   - requests==2.18.1
   - scandir==1.5
   - schematics==2.0.1
+  - shellescape==3.4.1
   - simplegeneric==0.8.1
   - simplejson==3.11.1
   - six==1.10.0

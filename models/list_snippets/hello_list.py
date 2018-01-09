@@ -15,7 +15,9 @@ def init_list():
 
 def insert_append_and_extend_list():
     print("=== insert_append_and_extend_list ===")
-    l = ['e', 'g']
+    l = ['e', 'h']
+    l.insert(-1, 'g')
+    print(l)
     l.insert(1, 'f')
     print(l)
     l.insert(0, 'd')
@@ -95,16 +97,17 @@ def list_slice():
     print(l[-1:])
     print(l[-5:])
     print(l[:-1])
+    print(l[10:20])
 
 
 def main():
-    init_list()
-    insert_append_and_extend_list()
-    remove_pop_list()
-    get_len_count_index_list()
-    sort_reverse_list()
-    sort_list()
-    list_index()
+    # init_list()
+    # insert_append_and_extend_list()
+    # remove_pop_list()
+    # get_len_count_index_list()
+    # sort_reverse_list()
+    # sort_list()
+    # list_index()
     list_slice()
 
 
