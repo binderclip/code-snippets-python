@@ -4,6 +4,7 @@ import argparse
 
 def main():
     parser = argparse.ArgumentParser(add_help=False)
+    parser.add_argument('integers', metavar='N', type=int, nargs='+', help='an integer for the accumulator')
     parser.add_argument("-n", "--none", help="default store action")    # 同 store
     parser.add_argument("-s", "--store", help="store action", action="store")   # 只存储最后一次设置
     parser.add_argument("-c", "--store_const", help="store_const action", action="store_const", const="CONST")  # 设置的话使用 CONST
@@ -26,6 +27,7 @@ def main():
     print("append: ", args.append)
     print("append_const: ", args.append_const)
     print("count: ", args.count)
+    print("integers: ", args.integers)
     # print("help: ", args.HELP)    # 不会被设置
     # print("version: ", args.version)  # 不会被设置
     # print("parsers: ", args.parsers)  # 不知道
