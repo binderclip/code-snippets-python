@@ -1,1 +1,2 @@
 - [XML parsing — The Hitchhiker's Guide to Python](http://docs.python-guide.org/en/latest/scenarios/xml/)
+- [martinblech/xmltodict: Python module that makes working with XML feel like you are working with JSON](https://github.com/martinblech/xmltodict)

@@ -1,0 +1,1 @@
+[arrays - Python: How to hash a string into 8 digits? - Stack Overflow](https://stackoverflow.com/questions/16008670/python-how-to-hash-a-string-into-8-digits)
