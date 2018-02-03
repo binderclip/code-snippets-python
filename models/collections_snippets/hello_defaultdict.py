@@ -18,6 +18,9 @@ def main():
     dd = defaultdict(lambda: 3)
     print(dd['a'], dd['b'])
 
+    dd = defaultdict(lambda: [])
+    print(dd['a'], dd['b'])
+
 
 if __name__ == '__main__':
     main()
