@@ -28,10 +28,18 @@ def sort_str():
     print(str_list)
 
 
+def get_char_of_str():
+    print("===== get_char_of_str =====")
+    s = 'hello'
+    for c in s:
+        print(c)
+
+
 def main():
     split_str()
     split_unicode()
     sort_str()
+    get_char_of_str()
 
 
 if __name__ == '__main__':

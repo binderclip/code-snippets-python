@@ -1,0 +1,1 @@
+- [How to set environment variables in Python - Stack Overflow](https://stackoverflow.com/questions/5971312/how-to-set-environment-variables-in-python)

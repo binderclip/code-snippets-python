@@ -9,6 +9,8 @@ name = "pypi"
 
 flask = "*"
 xmltodict = "*"
+python-telegram-bot = "*"
+"beautifulsoup4" = "*"
 
 
 [dev-packages]
