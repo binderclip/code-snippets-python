@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "c17cf92f61cf8bd1994b383a91e2d68e29bca8159033d865aa6ba329c16ca1a9"
+            "sha256": "4718f676378d1f80f16da455903661273024592964728bafd4b106ee49a7c790"
         },
         "host-environment-markers": {
             "implementation_name": "cpython",
@@ -58,6 +58,12 @@
             ],
             "version": "==0.12.2"
         },
+        "flask-mako": {
+            "hashes": [
+                "sha256:8291def038ac3ba753fdcc53fdedc89b4b4c8a80f670f19f0b11794b8c5aaca5"
+            ],
+            "version": "==0.4"
+        },
         "future": {
             "hashes": [
                 "sha256:e39ced1ab767b5936646cedba8bcce582398233d6a627067d4c6a454c90cfedb"
@@ -76,6 +82,12 @@
                 "sha256:f84be1bb0040caca4cea721fcbbbbd61f9be9464ca236387158b0feea01914a4"
             ],
             "version": "==2.10"
+        },
+        "mako": {
+            "hashes": [
+                "sha256:4e02fde57bd4abb5ec400181e4c314f56ac3e49ba4fb8b0d50bba18cb27d25ae"
+            ],
+            "version": "==1.0.7"
         },
         "markupsafe": {
             "hashes": [

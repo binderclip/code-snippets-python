@@ -200,3 +200,6 @@ ENV/
 
 # database file
 *.db
+
+# ide
+.idea

@@ -11,6 +11,8 @@ flask = "*"
 xmltodict = "*"
 python-telegram-bot = "*"
 "beautifulsoup4" = "*"
+mako = "*"
+flask-mako = "*"
 
 
 [dev-packages]
