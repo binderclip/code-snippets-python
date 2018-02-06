@@ -21,6 +21,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-# https://stackoverflow.com/questions/14058453/making-python-loggers-output-all-messages-to-stdout-in-addition-to-log

@@ -14,6 +14,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-# [26.1. typing — Support for type hints — Python 3.6.4 documentation](https://docs.python.org/3/library/typing.html#module-typing)

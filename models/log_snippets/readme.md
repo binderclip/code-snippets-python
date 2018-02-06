@@ -1,0 +1,4 @@
+- [日志（Logging） — The Hitchhiker's Guide to Python](http://pythonguidecn.readthedocs.io/zh/latest/writing/logging.html)
+- [Logging HOWTO — Python 3.6.4 documentation](https://docs.python.org/3.6/howto/logging.html)
+- [16.6. logging — Logging facility for Python — Python 3.6.4 documentation](https://docs.python.org/3.6/library/logging.html)
+- https://stackoverflow.com/questions/14058453/making-python-loggers-output-all-messages-to-stdout-in-addition-to-log
