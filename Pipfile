@@ -13,6 +13,7 @@ python-telegram-bot = "*"
 "beautifulsoup4" = "*"
 mako = "*"
 flask-mako = "*"
+wtforms = "*"
 
 
 [dev-packages]
