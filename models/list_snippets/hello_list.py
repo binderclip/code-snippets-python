@@ -100,6 +100,13 @@ def list_slice():
     print(l[10:20])
 
 
+def list_comprehension():
+    print("=== list_comprehension ===")
+    # 列表推导式
+    l = [i * i for i in range(3)]
+    print(l)
+
+
 def main():
     # init_list()
     # insert_append_and_extend_list()
@@ -108,7 +115,8 @@ def main():
     # sort_reverse_list()
     # sort_list()
     # list_index()
-    list_slice()
+    # list_slice()
+    list_comprehension()
 
 
 if __name__ == '__main__':

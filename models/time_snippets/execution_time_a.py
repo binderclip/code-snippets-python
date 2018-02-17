@@ -1,6 +1,7 @@
 # coding: utf-8
 import time
 
+
 def timeit(method):
 
     def timed(*args, **kw):
@@ -8,8 +9,7 @@ def timeit(method):
         result = method(*args, **kw)
         te = time.time()
 
-        print '%r (%r, %r) %2.2f sec' % \
-              (method.__name__, args, kw, te - ts)
+        print('{} ({}, {}) {} sec'.format(method.__name__, args, kw, te - ts))
         return result
 
     return timed
@@ -25,19 +25,19 @@ class Foo(object):
 @timeit
 def f1():
     time.sleep(1)
-    print 'f1'
+    print('f1')
 
 
 @timeit
 def f2(a):
     time.sleep(2)
-    print 'f2', a
+    print('f2', a)
 
 
 @timeit
 def f3(a, *args, **kw):
     time.sleep(0.3)
-    print 'f3', args, kw
+    print('f3', args, kw)
 
 
 def main():
