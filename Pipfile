@@ -14,6 +14,7 @@ python-telegram-bot = "*"
 mako = "*"
 flask-mako = "*"
 wtforms = "*"
+marshmallow = "*"
 
 
 [dev-packages]
