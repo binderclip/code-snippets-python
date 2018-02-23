@@ -1,5 +1,5 @@
 import datetime
-from marshmallow import Schema, fields, pprint
+from marshmallow import Schema, fields
 
 
 class ArtistSchema(Schema):

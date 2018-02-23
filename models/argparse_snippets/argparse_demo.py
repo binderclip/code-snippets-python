@@ -9,9 +9,9 @@ def main():
 
     args = parser.parse_args()
 
-    print args
-    print args.debug
-    print args.your_name
+    print(args)
+    print(args.debug)
+    print(args.your_name)
 
 
 if __name__ == '__main__':

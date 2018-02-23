@@ -15,6 +15,10 @@ mako = "*"
 flask-mako = "*"
 wtforms = "*"
 marshmallow = "*"
+aiohttp = "*"
+peewee = "*"
+pymysql = "*"
+marshmallow-polyfield = "*"
 
 
 [dev-packages]
