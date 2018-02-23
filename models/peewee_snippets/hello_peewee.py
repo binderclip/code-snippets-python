@@ -1,6 +1,5 @@
 # coding: utf-8
 import datetime
-import peewee
 from my_models import db, Person, Pet
 
 
@@ -62,8 +61,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-# http://docs.peewee-orm.com/en/latest/index.html
-# http://docs.peewee-orm.com/en/latest/peewee/example.html
-# https://github.com/coleifer/peewee/issues/725
