@@ -1,7 +1,3 @@
-# coding: utf-8
-import datetime
-from peewee import *
-
 from playhouse.db_url import connect
 
 
@@ -20,21 +16,3 @@ MYSQL_DB_URL = "mysql://{user}:{password}@{host}:{port}/{db_name}?charset=utf8mb
 
 
 db = connect(MYSQL_DB_URL)
-
-
-class Person(Model):
-
-    name = CharField()
-    birthday = DateField()
-    is_relative = BooleanField()
-
-    class Meta:
-        database = db
-
-
-class Ppp(Model):
-    name = CharField()
-    create_time = DateTimeField(default=datetime.datetime.now)
-
-    class Meta:
-        database = db

@@ -1,6 +1,43 @@
 # coding: utf-8
 import datetime
-from my_models import db, Person, Pet
+from peewee import *
+from mysql_db import db
+
+
+class BaseModel(Model):
+
+    class Meta:
+        database = db
+
+    def save(self, *args, **kwargs):
+        if hasattr(self, 'update_time'):
+            self.update_time = datetime.datetime.now()
+        return super(BaseModel, self).save(*args, **kwargs)
+
+    @classmethod
+    def get(cls, *query, **kwargs):
+        try:
+            return super(BaseModel, cls).get(*query, **kwargs)
+        except DoesNotExist:
+            return None
+
+
+class Person(BaseModel):
+    create_time = DateTimeField(default=datetime.datetime.now)
+    update_time = DateTimeField(default=datetime.datetime.now)
+
+    name = CharField()
+    birthday = DateField()
+    is_relative = BooleanField()
+
+
+class Pet(BaseModel):
+    create_time = DateTimeField(default=datetime.datetime.now)
+    update_time = DateTimeField(default=datetime.datetime.now)
+
+    owner_id = IntegerField()
+    name = CharField()
+    animal_type = CharField()
 
 
 def create_db_and_tables():
