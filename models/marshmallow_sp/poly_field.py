@@ -60,9 +60,7 @@ def button_serialization_schema_selector(_, obj):
     try:
         return type_to_schema[obj.type]()
     except KeyError:
-        raise TypeError("Could not detect type. "
-                        "Did not have a base or a length. "
-                        "Are you sure this is a shape?")
+        raise TypeError("Could not detect type. ")
 
 
 def button_deserialization_schema_selector(data, _):
@@ -73,9 +71,7 @@ def button_deserialization_schema_selector(data, _):
     try:
         return type_to_schema[data['type']]()
     except KeyError:
-        raise TypeError("Could not detect type. "
-                        "Did not have a base or a length. "
-                        "Are you sure this is a shape?")
+        raise TypeError("Could not detect type. ")
 
 
 class MenuSchema(Schema):
