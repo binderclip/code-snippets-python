@@ -19,6 +19,8 @@ aiohttp = "*"
 peewee = "*"
 pymysql = "*"
 marshmallow-polyfield = "*"
+requests = "*"
+ipython = "*"
 
 
 [dev-packages]
