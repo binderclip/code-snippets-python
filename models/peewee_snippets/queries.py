@@ -60,6 +60,15 @@ def get_or_create():
     print(foo, created)
 
 
+def save_row():
+    print('=== save_row ===')
+    foo = Foo(name='n5', type=FooType.TB)
+    print(foo)
+    foo2 = foo.save()
+    print(foo)
+    print(foo2)
+
+
 # TODO: Bulk inserts in many ways
 # TODO: update
 
@@ -157,7 +166,7 @@ def main():
     #     get_one()
     # except DoesNotExist as e:
     #     print(e)
-    get_all()
+    # get_all()
     # get_specific_columns()
     # get_specific_rows()
     # get_ordered_rows()
@@ -165,6 +174,7 @@ def main():
     # get_with_limit_offset()
     # get_with_paginate()
     # get_or_create()
+    save_row()
 
 
 if __name__ == '__main__':

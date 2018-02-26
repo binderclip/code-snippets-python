@@ -84,6 +84,14 @@ def main():
     result = schema.dump(user)
     print(result)
 
+    schema = UserSchema(many=True)
+    print('=== dump dict many ===')
+    result = schema.dump([
+        {"name": "Monty", "data": {"age": 18, "foo": "bar"}},
+        {"name": "Kin", "data": {"age": 28, "baz": "bar"}},
+    ])
+    print(result)
+
 
 if __name__ == '__main__':
     main()
