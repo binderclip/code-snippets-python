@@ -4,7 +4,6 @@ from marshmallow_polyfield import PolyField
 
 
 class AutoReplyType(object):
-
     KEYWORD = 1
     EVENT = 2
 
