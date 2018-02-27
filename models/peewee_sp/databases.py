@@ -11,7 +11,7 @@ def create_database():
 
 
 def drop_database():
-    conn.cursor().execute(f'DROP DATABASE {MYSQL_DB_NAME};')
+    conn.cursor().execute(f'DROP DATABASE IF EXISTS {MYSQL_DB_NAME};')
     print('=== drop database done ===')
 
 
