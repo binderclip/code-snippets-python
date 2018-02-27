@@ -2,7 +2,7 @@
 
 ```shell
 pip install peewee
-pip install PyMySQL 
+pip install PyMySQL
 ```
 
 ## refs
