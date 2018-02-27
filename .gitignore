@@ -203,3 +203,6 @@ ENV/
 
 # ide
 .idea
+
+# pytest
+.pytest_cache

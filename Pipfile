@@ -25,6 +25,7 @@ ipython = "*"
 
 [dev-packages]
 
+pytest = "*"
 
 
 [requires]
