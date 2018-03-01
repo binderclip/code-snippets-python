@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "228a7b2f59d92ac7b7e0fcab542337cfacade077f00cd21eb7bd6919091be369"
+            "sha256": "93f9fd4732a2f0473ca24c51072dd4a03e97af76e46c2f7d15bf1ef5f2e55634"
         },
         "host-environment-markers": {
             "implementation_name": "cpython",
@@ -31,23 +31,23 @@
     "default": {
         "aiohttp": {
             "hashes": [
-                "sha256:b5d239a4fb6c0dac9a64936269ef3f65d990d8f17df512e31d1fa43436c39f0a",
-                "sha256:c060a061f9d09a97bfdd326c822380e830b05eb6d25e6d07b59c0278339a7b74",
-                "sha256:3c1305d8b282cef804db30a1bb53cbdab176793eb7da7b148cc16256a1a417a8",
-                "sha256:97f7130bd67ca829f301868bd19cb6aaef965ab40057e13496627d4cce11f27a",
-                "sha256:21c92f905b2a0cd4cf8ad68e72f1e9de771ce94d7c054f7816b1c9251fdd3279",
-                "sha256:a77eca1f6d66cdc791efdaa9709163c34e870302d56f5957a3f9bbf67ee58fd7",
-                "sha256:98ef1f496dca7fe2956905bf2f65a152d16480de3a572fdba079571fb482849d",
-                "sha256:02b5f096e36d386215c102c32328e6879f5a310166aaed73faeb35e5ac61be43",
-                "sha256:0b718487f46bcd106e954fb4d96d39feb1350539891185f40dffa1c1d5886589",
-                "sha256:823cb717882eaaa07208ec8a03a5aedfcd1411b3d8bdb57a024c09f216a086c6",
-                "sha256:ab90d06955c2d21a24d8fb3c96cdf6ecd1d06041380597bc03a17c453311f52c",
-                "sha256:f33efb12238e6a4a583f4aff470df7bca07e4df1b412eb469d85de248909eaa6",
-                "sha256:981a1b84068516a2758ca6d5bb29eacef644bfb5fd29ddbdc25ba72fa26f946b",
-                "sha256:8befe40664160afa721f4faa710ef0c84316c9478e86bbb3d6ec9f9c0a046bb3",
-                "sha256:a96be9189b2d51e366106e4207c9afaf3d69462562548a613e399c311ff70b88"
+                "sha256:3e8a93e4cb25b929354d9c88c98ca87bef6c49cd03d375f2fb4f595172fc4d62",
+                "sha256:1dd839c079d25c9b458101c3b79a16ed319c27d1fbb7a98ce8a90c60f05afc2e",
+                "sha256:9d874b9fa19858130c5538a12db0eadf4ea18724412bc03d78e21723202072a9",
+                "sha256:0bcf2dced281db97ad6d16aefe6d846c4bc6cabf8f1bc7dd7868feb20fb039ea",
+                "sha256:e909d4bc3655c8857ae5120f7ab5172c0bf11c8afda7c0ea05e91ddebd213dc4",
+                "sha256:cac147cab6ea173f234ce91e941241812bc7cb1d544e4893cebff314a012844a",
+                "sha256:16761ca659ce0609b76114a23f8f24c1f1e83e5cbfcd118fd29d6d3bd981fce0",
+                "sha256:c44987443235468fce44be4059655311a59c1c0e8e5a2aeea38dc196d41c9c1d",
+                "sha256:286aa16fca37a81a6f48c1b60178592efead43acdc0fd0ff9588b216ea848f30",
+                "sha256:21f8499675437bf3a31724c360af7484bae840f0294c16d979f148343df01493",
+                "sha256:fcd0e1d1d765ba24b25c3524aad9baf9e812e0983922d2528f464b0ca98fd932",
+                "sha256:7cb40af76a01349e6ab84f577ffccbe4e22c738d9c5f400b3117dffcde422387",
+                "sha256:1ec1a759831eca5aa20efb5023afebb915c43212635d50fad03e669a1b093ea6",
+                "sha256:f0831139ee003f850eee06e345dd905f99d1b655e634f8af6f03fcdb7222d0bf",
+                "sha256:bb873da531401416acb7045a8f0bdf6555e9c6866989cd977166fae3cbbb954b"
             ],
-            "version": "==3.0.3"
+            "version": "==3.0.5"
         },
         "appnope": {
             "hashes": [
@@ -106,6 +106,12 @@
                 "sha256:7d46dd9f3ea1cf5f06ee0e4e1277ae618cf48dfb10ada7c8427cd46c42702a0e"
             ],
             "version": "==4.2.1"
+        },
+        "fire": {
+            "hashes": [
+                "sha256:c299d16064ff81cbb649b65988300d4a28b71ecfb789d1fb74d99ea98ae4d2eb"
+            ],
+            "version": "==0.1.3"
         },
         "flask": {
             "hashes": [
@@ -236,9 +242,9 @@
         },
         "peewee": {
             "hashes": [
-                "sha256:e2df2de859ca366525430c7f2e4cd5a95029d45872dadc02f9a3403b16fb165e"
+                "sha256:721d4d221bebdc0ed82484c36185dd83d048cc2553df7f91047bf5a53f6c3066"
             ],
-            "version": "==3.1.0"
+            "version": "==3.1.1"
         },
         "pexpect": {
             "hashes": [

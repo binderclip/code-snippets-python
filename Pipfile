@@ -21,6 +21,7 @@ pymysql = "*"
 marshmallow-polyfield = "*"
 requests = "*"
 ipython = "*"
+fire = "*"
 
 
 [dev-packages]
