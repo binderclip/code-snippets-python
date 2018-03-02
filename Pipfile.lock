@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "93f9fd4732a2f0473ca24c51072dd4a03e97af76e46c2f7d15bf1ef5f2e55634"
+            "sha256": "0a7137caffff470f7f002083ffbe7d801b03d8fbaa91d7071e2513c5ef5abe11"
         },
         "host-environment-markers": {
             "implementation_name": "cpython",
@@ -99,6 +99,13 @@
                 "sha256:f15516df478d5a56180fbf80e68f206010e6d160fc39fa508b65e035fd75130b"
             ],
             "version": "==6.7"
+        },
+        "dataclasses": {
+            "hashes": [
+                "sha256:068953b730c80cbb13ca6aac6ceedaa5d483fb6081a372ac4788aa5179ed9597",
+                "sha256:0f75133f21f6c9bd0fe82bc75d9908e46f531682911c9cffa75bce0e40ef09ef"
+            ],
+            "version": "==0.4"
         },
         "decorator": {
             "hashes": [
@@ -242,9 +249,9 @@
         },
         "peewee": {
             "hashes": [
-                "sha256:721d4d221bebdc0ed82484c36185dd83d048cc2553df7f91047bf5a53f6c3066"
+                "sha256:46d96502ea6f84f8e66c055282ac2d6fd332ccd62c8c3c93d68a43d055cd2450"
             ],
-            "version": "==3.1.1"
+            "version": "==3.1.2"
         },
         "pexpect": {
             "hashes": [
@@ -303,6 +310,13 @@
                 "sha256:9c443e7324ba5b85070c4a818ade28bfabedf16ea10206da1132edaa6dda237e"
             ],
             "version": "==2.18.4"
+        },
+        "schematics": {
+            "hashes": [
+                "sha256:d9798a9ba0e1e1f2bde4a15780baa95ed66f748fa52d22bb89893d66ad0fac55",
+                "sha256:eaecac4ae5a86faa111f16befa26510bc66dc093c52df200f3aad54459e39640"
+            ],
+            "version": "==2.0.1"
         },
         "simplegeneric": {
             "hashes": [

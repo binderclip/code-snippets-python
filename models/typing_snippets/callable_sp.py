@@ -1,5 +1,5 @@
 # coding: utf-8
-from typing import Callable, List
+from typing import Callable
 
 
 def feeder(get_next_item: Callable[[], str]) -> None:

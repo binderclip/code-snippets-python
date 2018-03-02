@@ -1,0 +1,3 @@
+- [PEP 557 -- Data Classes | Python.org](https://www.python.org/dev/peps/pep-0557/)
+- [ericvsmith/dataclasses](https://github.com/ericvsmith/dataclasses)
+- [A brief tour of Python 3.7 data classes – Hacker Noon](https://hackernoon.com/a-brief-tour-of-python-3-7-data-classes-22ee5e046517)

@@ -11,6 +11,13 @@ def main():
     print(d)
     print(d.popitem())
     print(d)
+    d = {
+        'c': 'cc',
+        'd': 'dd',
+    }
+    print(d)
+    d.clear()
+    print(d)
 
 
 if __name__ == '__main__':

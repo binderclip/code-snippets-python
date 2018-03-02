@@ -11,18 +11,17 @@ class A(object):
 
 def main():
     a1 = A('aaa')
-    if hasattr(a1, 'f1'):
-        a1.f1()
-    if hasattr(a1, 'f2'):
-        a1.f2()
-    try:
-        a1.f1()
-    except AttributeError:
-        pass
-    try:
-        a1.f2()
-    except AttributeError:
-        pass
+    print(A.__dict__)
+    print(A.__dict__['f1'])
+    print(hasattr(a1, 'f1'))
+    print(hasattr(a1, 'f2'))
+    a1.f1()
+    # a1.f2()     # AttributeError: 'A' object has no attribute 'f2'
+
+    d = {'b': 'bb'}
+    # print(d.__dict__)   # AttributeError: 'dict' object has no attribute '__dict__'
+    print(hasattr(d, 'b'))  # False
+    print('b' in d)         # True
 
 
 if __name__ == '__main__':

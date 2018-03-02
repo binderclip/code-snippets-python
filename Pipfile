@@ -22,6 +22,8 @@ marshmallow-polyfield = "*"
 requests = "*"
 ipython = "*"
 fire = "*"
+dataclasses = "*"
+schematics = "*"
 
 
 [dev-packages]
