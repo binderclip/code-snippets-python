@@ -1,15 +1,15 @@
 # coding: utf-8
 import codecs
-import simplejson
+import json
 
 
 def load_dump_test():
     print('''=== load_dump_test ===''')
     with open("hello.json") as f:
-        s = simplejson.load(f)
+        s = json.load(f)
         print(s)
     with open("hello.json", 'w') as f:
-        simplejson.dump({"hello": "world"}, f)
+        json.dump({"hello": "world"}, f)
 
 
 def load_dump_unicode_test():
@@ -17,12 +17,12 @@ def load_dump_unicode_test():
     file_name = "hello_u.json"
     data = {"hello": "世界"}
     with open(file_name) as f:
-        s = simplejson.load(f)
+        s = json.load(f)
         print(s)
     # with open(file_name, 'w') as f:
-        # simplejson.dump(data, f, ensure_ascii=False)    # UnicodeEncodeError
+        # json.dump(data, f, ensure_ascii=False)    # UnicodeEncodeError
     with codecs.open(file_name, 'w', 'utf-8') as f:
-        simplejson.dump(data, f, ensure_ascii=False)
+        json.dump(data, f, ensure_ascii=False)
 
 
 def main():
