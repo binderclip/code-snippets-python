@@ -166,7 +166,7 @@ def main():
     #     get_one()
     # except DoesNotExist as e:
     #     print(e)
-    # get_all()
+    get_all()
     # get_specific_columns()
     # get_specific_rows()
     # get_ordered_rows()
@@ -174,7 +174,7 @@ def main():
     # get_with_limit_offset()
     # get_with_paginate()
     # get_or_create()
-    save_row()
+    # save_row()
 
 
 if __name__ == '__main__':
