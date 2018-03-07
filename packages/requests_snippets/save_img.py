@@ -9,13 +9,14 @@ def save_img(path, url):
     r = requests.get(url, stream=True)
     if r.status_code == 200:
         with open(path, 'wb') as f:
-            r.raw.decode_content = True     # ?
+            r.raw.decode_content = True     #      # decode based on content-encoding
+            print(type(r.raw))
             shutil.copyfileobj(r.raw, f)
 
 
 def main():
     img_path = "xxx.jpg"
-    url = "http://s2.cdn.xiachufang.com/fe11b65e673511e7947d0242ac110002_850w_567h.jpg"
+    url = "https://qn.cdn.cliiip.com/imgs/u/4c3f70fd-f1c4-4232-a6ff-9228ce164fc5.png"
     save_img(img_path, url)
 
 
