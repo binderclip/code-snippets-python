@@ -27,11 +27,11 @@ def draw_lines(im):
 
 
 def main():
-    im = Image.open("../common_img/jump_jump.jpg")
+    im = Image.open("../_common_img/jump_jump.jpg")
     # print_all_pixel_data(im)
     # draw_points(im)
     draw_lines(im)
-    im.save("../common_img/jump_jump2.jpg")
+    im.save("../_common_img/jump_jump2.jpg")
 
 
 if __name__ == '__main__':

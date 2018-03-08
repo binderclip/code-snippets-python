@@ -4,7 +4,7 @@ from PIL import Image
 
 
 def main():
-    im = Image.open("../common_img/in.jpg")
+    im = Image.open("../_common_img/in.jpg")
     print(im.format, im.size, im.mode)
 
 
