@@ -25,6 +25,7 @@ fire = "*"
 dataclasses = "*"
 schematics = "*"
 pydantic = "*"
+redis = "*"
 
 
 [dev-packages]

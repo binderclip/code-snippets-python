@@ -72,6 +72,13 @@ def save_row():
 # TODO: Bulk inserts in many ways
 # TODO: update
 
+def update_some():
+    print('=== update_some ===')
+    # id < 3, type = type + 1
+    # Foo.update({Foo.type: Foo.type + 1}).where(Foo.id < 3).execute()
+    # id < 3, type = 1
+    Foo.update(type=1).where(Foo.id < 3).execute()
+
 
 def get_one():
     print('=== get_one ===')
@@ -175,6 +182,7 @@ def main():
     # get_with_paginate()
     # get_or_create()
     # save_row()
+    # update_some()
 
 
 if __name__ == '__main__':
