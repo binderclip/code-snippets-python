@@ -13,6 +13,9 @@ def set_data():
     r.hset(hash_key, 'a', 'aa')
     r.hset(hash_key, 'b', 'bb')
 
+    r.hset(hash_key, 't', True)
+    r.hset(hash_key, 'f', False)
+
 
 def incr_data():
     print('===== incr_data =====')
@@ -23,6 +26,8 @@ def get_data():
     print('===== get_data =====')
     print('foo: {}'.format(r.hget(hash_key, 'foo')))
     print('bar: {}'.format(r.hget(hash_key, 'bar')))
+    print('t: {}'.format(bool(r.hget(hash_key, 't'))))
+    print('f: {}'.format(bool(r.hget(hash_key, 'f'))))  # True，因为是作为字符串处理的s
     print('n: {}'.format(r.hget(hash_key, 'n')))
     print('all: {}'.format(r.hgetall(hash_key)))
     print('all keys: {}'.format(r.hgetall(hash_key).keys()))

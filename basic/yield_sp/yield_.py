@@ -2,7 +2,7 @@
 
 
 def my_range(n):
-    for i in xrange(0, n):
+    for i in range(0, n):
         yield i
 
 

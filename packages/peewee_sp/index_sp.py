@@ -1,0 +1,27 @@
+from peewee import *
+from mysql_db import db
+
+
+class BaseModel(Model):
+    class Meta:
+        database = db
+
+
+class BigIndex(BaseModel):
+    my_integer = IntegerField(index=True)
+    my_char = CharField(unique=True)
+
+    class Meta:
+        indexes = (
+            # create a unique on from/to/date
+            (('my_integer', 'my_char', ), False),
+        )
+
+
+def main():
+    db.connect()
+    db.create_tables([BigIndex])
+
+
+if __name__ == '__main__':
+    main()
