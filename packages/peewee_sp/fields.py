@@ -16,7 +16,7 @@ class BigBoss(BaseModel):
     my_double = DoubleField()
     my_decimal = DecimalField()
     my_char = CharField()
-    my_fixedchar = FixedCharField()
+    my_fixedchar = FixedCharField()     # maxlength=
     my_text = TextField()
     my_blob = BlobField()
     my_bit = BitField()
