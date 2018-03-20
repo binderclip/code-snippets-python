@@ -44,6 +44,25 @@ def insert_row():
     Foo.insert(name='n4', type=FooType.TC).execute()
 
 
+def insert_many_rows():
+    print('=== insert_many_rows ===')
+    data_source = [
+        {
+            Foo.name: 'n10',
+            Foo.type: FooType.TA,
+        },
+        {
+            Foo.name: 'n11',
+            Foo.type: FooType.TB,
+        }
+    ]
+    Foo.insert_many(data_source).execute()
+
+    data = [('n10', FooType.TB), ('n10', FooType.TC)]
+    fields = [Foo.name, Foo.type]
+    Foo.insert_many(data, fields=fields).execute()
+
+
 def create_row():
     print('=== create_row ===')
     foo = Foo.create(name='n5', type=FooType.TB)
@@ -168,6 +187,7 @@ def get_with_paginate():
 def main():
     # create_tables()
     # insert_row()
+    # insert_many_rows()
     # create_row()
     # try:
     #     get_one()

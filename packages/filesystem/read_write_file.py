@@ -27,3 +27,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+# https://www.guru99.com/reading-and-writing-files-in-python.html
