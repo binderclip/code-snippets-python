@@ -1,4 +1,3 @@
-# coding: utf-8
 from collections import OrderedDict
 
 
@@ -8,9 +7,14 @@ def main():
     od = OrderedDict(sorted(d.items(), key=lambda t: t[0]))
     print(od)
     print(od['banana'])
+
     od['grape'] = 10
     print(od)
 
+    od['banana'] = 1
+    print(od)
+
+    print(od.keys())
     # print(od[0])    # KeyError: 0
 
 
