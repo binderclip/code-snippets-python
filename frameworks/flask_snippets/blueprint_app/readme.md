@@ -1,0 +1,1 @@
+[Modular Applications with Blueprints — Flask Documentation (0.12)](http://flask.pocoo.org/docs/0.12/blueprints/)
