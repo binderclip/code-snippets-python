@@ -105,7 +105,9 @@ def get_one():
     print(foo1)
     foo2 = Foo.get(id=2)
     print(foo2)
-    foo100 = Foo.get(id=100)
+    foo100x = Foo.get(100)    # ERROR!!!
+    print(foo100x)
+    foo100 = Foo.get_by_id(100)
     print(foo100)
 
 
