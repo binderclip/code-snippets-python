@@ -88,9 +88,6 @@ def save_row():
     print(foo2)
 
 
-# TODO: Bulk inserts in many ways
-# TODO: update
-
 def update_some():
     print('=== update_some ===')
     # id < 3, type = type + 1
