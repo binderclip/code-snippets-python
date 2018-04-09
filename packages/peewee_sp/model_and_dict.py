@@ -7,6 +7,7 @@ def main():
     foo = Foo.get(id=1)
     print(foo)
     print(model_to_dict(foo))
+    print(model_to_dict(foo, exclude=[Foo.type]))
 
     d = {
         'id': 1,
