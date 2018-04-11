@@ -1,8 +1,8 @@
-from pydantic import BaseModel, ValidationError, validator
+from pydantic import BaseModel, ValidationError, validator, constr
 
 
 class UserModel(BaseModel):
-    name: str
+    name: constr(min_length=4, max_length=16)
     password1: str
     password2: str
 
@@ -24,17 +24,22 @@ def main():
     # > UserModel name='Samuel Colvin' password1='zxcvbn' password2='zxcvbn'
 
     try:
-        UserModel(name='samuel', password1='zxcvbn', password2='zxcvbn2')
+        UserModel(name='sam', password1='zxcvbn', password2='zxcvbn2')
     except ValidationError as e:
         print(e)
-    """
-    2 errors validating input
-    name:
-      must contain a space (error_type=ValueError track=str)
-    password2:
-      passwords do not match (error_type=ValueError track=str)
-    """
+    # 2 errors validating input
+    # name:
+    #   length less than minimum allowed: 4 (error_type=ValueError track=ConstrainedStrValue)
+    # password2:
+    #   passwords do not match (error_type=ValueError track=str)
 
+    try:
+        UserModel(name='samuel', password1='zxcvbn', password2='zxcvbn')
+    except ValidationError as e:
+        print(e)
+    # error validating input
+    # name:
+    #   must contain a space (error_type=ValueError track=ConstrainedStrValue)
 
 if __name__ == '__main__':
     main()
