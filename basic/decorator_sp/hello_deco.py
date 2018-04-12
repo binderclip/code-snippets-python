@@ -1,6 +1,3 @@
-# coding: utf-8
-
-
 def identity(f):
     return f
 

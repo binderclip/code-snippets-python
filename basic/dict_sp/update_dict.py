@@ -12,6 +12,8 @@ def main():
     }
     d1.update(**d2)
     print(d1)
+    print(d1.pop('foo'))
+    print(d1)
 
 
 if __name__ == '__main__':

@@ -1,4 +1,3 @@
-# coding: utf-8
 import requests
 
 
@@ -25,7 +24,7 @@ def make_a_get():
 
 
 def main():
-    print make_a_get()
+    print(make_a_get())
 
 
 if __name__ == '__main__':
