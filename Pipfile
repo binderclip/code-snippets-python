@@ -26,6 +26,7 @@ dataclasses = "*"
 schematics = "*"
 pydantic = "*"
 redis = "*"
+pendulum = "*"
 
 
 [dev-packages]
