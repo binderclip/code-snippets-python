@@ -2,13 +2,9 @@ import datetime
 import json
 
 
-def _strftime(d):
-    return d.strftime('%Y-%m-%d %H:%M:%S')
-
-
 class MyEncoder(json.JSONEncoder):
     ENCODER_BY_TYPE = {
-        datetime.datetime: _strftime,
+        datetime.datetime: lambda dt: dt.isoformat(),
         set: list,
     }
 
