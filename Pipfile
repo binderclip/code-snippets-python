@@ -27,6 +27,8 @@ schematics = "*"
 pydantic = "*"
 redis = "*"
 pendulum = "*"
+mypy = "*"
+mypy-extensions = "*"
 
 
 [dev-packages]
