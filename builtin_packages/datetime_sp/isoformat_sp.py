@@ -2,12 +2,9 @@ import datetime
 
 
 def main():
-    dts = '2018-04-13 16:06:11.844265+08:00'
-    dt = datetime.datetime.s(dts)
+    dt = datetime.datetime.utcnow()
     print(dt)
-
-    print('Hello')
-
+    print(dt.isoformat())
 
 if __name__ == '__main__':
     main()
