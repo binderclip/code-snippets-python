@@ -146,6 +146,19 @@ def get_specific_rows():
         print(foo)
 
 
+def delete_rows():
+    print('=== delete_rows ===')
+    print(Foo.select().count())
+    foo = Foo.get_by_id(1)
+    foo.delete_instance()
+
+    Foo.delete_by_id(4)
+
+    Foo.delete().where(Foo.type == FooType.TB).execute()
+    print(Foo.select().count())
+
+
+
 def get_ordered_rows():
     print('=== get_ordered_rows ===')
     query = Foo.select().order_by(Foo.id.desc())
@@ -202,6 +215,7 @@ def main():
     # get_or_create()
     # save_row()
     # update_some()
+    # delete_rows()
 
 
 if __name__ == '__main__':
