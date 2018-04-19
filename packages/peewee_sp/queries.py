@@ -12,6 +12,10 @@ class Foo(BaseModel):
     name = CharField()
     type = SmallIntegerField()
 
+    @property
+    def upper_name(self):
+        return self.name.upper()
+
     def __str__(self):
         return f'Foo(id: {self.id}, name: {self.name}, type: {self.type})'
 

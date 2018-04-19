@@ -8,6 +8,7 @@ def main():
     print(foo)
     print(model_to_dict(foo))
     print(model_to_dict(foo, exclude=[Foo.type]))
+    print(model_to_dict(foo, extra_attrs=['upper_name']))
 
     d = {
         'id': 1,
