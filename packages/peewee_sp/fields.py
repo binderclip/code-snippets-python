@@ -1,5 +1,5 @@
 from peewee import *
-from .mysql_db import db
+from mysql_db import db
 
 
 class BaseModel(Model):
@@ -15,7 +15,7 @@ class BigBoss(BaseModel):
     my_float = FloatField()
     my_double = DoubleField()
     my_decimal = DecimalField()
-    my_char = CharField()
+    my_char = CharField(max_length=32)
     my_fixedchar = FixedCharField()     # max_length=
     my_text = TextField()
     my_blob = BlobField()
