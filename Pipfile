@@ -29,6 +29,7 @@ redis = "*"
 pendulum = "*"
 mypy = "*"
 mypy-extensions = "*"
+pillow = "*"
 
 
 [dev-packages]
