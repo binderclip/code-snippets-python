@@ -32,7 +32,7 @@ def main():
         t.start()
 
     print('=== start work ===')
-    for i in xrange(100):
+    for i in range(100):
         q.put(i)
     q.join()  # block until all tasks are done
     print('=== end ===')
