@@ -1,12 +1,9 @@
-# coding: utf-8
-
-
 def main():
     start = 1
-    end = 10
+    end = 100
     step = 1
 
-    for i in xrange(start, end + step, step):
+    for i in range(start, end + step, step):
         print("{:02d}".format(i))   # 01
 
 
