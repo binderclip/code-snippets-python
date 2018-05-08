@@ -51,6 +51,7 @@ def get_len_count_index_list():
     print("=== get_len_count_index_list ===")
     l = ['a', 'b', 'c', 'd', 'e', 'e']
     print(l[0])
+    # l[10] = 'z'    # IndexError: list index out of range
     # print(l[10])    # IndexError: list index out of range
     # print(l.get(10))    # 'list' object has no attribute 'get'
     print('len: {}'.format(len(l)))
