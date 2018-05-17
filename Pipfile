@@ -30,6 +30,7 @@ pendulum = "*"
 mypy = "*"
 mypy-extensions = "*"
 pillow = "*"
+pyjwt = "*"
 
 
 [dev-packages]
