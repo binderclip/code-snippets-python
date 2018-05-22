@@ -1,5 +1,5 @@
 from peewee import *
-from mysql_db import db
+from packages.peewee_sp.mysql_db import db
 
 
 class BaseModel(Model):
