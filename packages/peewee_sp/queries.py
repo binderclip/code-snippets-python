@@ -156,11 +156,10 @@ def delete_rows():
     foo = Foo.get_by_id(1)
     foo.delete_instance()
 
-    Foo.delete_by_id(4)
+    print(Foo.delete_by_id(4))     # 删除不存在的内容不会报错，但会返回影响的行数
 
     Foo.delete().where(Foo.type == FooType.TB).execute()
     print(Foo.select().count())
-
 
 
 def get_ordered_rows():
