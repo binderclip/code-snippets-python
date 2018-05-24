@@ -110,6 +110,8 @@ def get_one():
     print(foo100x)
     foo100 = Foo.get_by_id(100)
     print(foo100)
+    foo3x = Foo.get(id=3, name='x')
+    print(foo3x)
 
 
 def get_all():
