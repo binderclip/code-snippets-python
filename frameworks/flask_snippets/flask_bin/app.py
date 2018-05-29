@@ -1,6 +1,6 @@
 # coding: utf-8
 import json
-from flask import Flask, request, redirect, url_for
+from flask import Flask, request, redirect, url_for, jsonify
 app = Flask(__name__)
 
 
@@ -12,7 +12,15 @@ def hello():
 @app.route("/args")
 def args():
     # http://localhost:8080/args?foo=bar
-    return json.dumps(request.args)
+    return jsonify(request.args.to_dict())       # trans ImmutableMultiDict to dict
+
+
+@app.route("/post", methods=['POST'])
+def r_post():
+    data = {}
+    data['content-type'] = request.content_type
+    data['form'] = request.form.to_dict()
+    return jsonify(data)
 
 
 @app.route("/redirect/with_args")
