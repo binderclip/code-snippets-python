@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, request
 
 from frameworks.flask_snippets.before_after_request_sp.bp import bp
 
@@ -9,6 +9,8 @@ app.register_blueprint(bp, url_prefix='/bp')
 @app.before_request
 def before_request():
     print('>>> before_request')
+    print(request.method)
+    print(type(request.method))
 
 
 @app.after_request
