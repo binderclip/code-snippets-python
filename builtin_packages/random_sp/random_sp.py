@@ -47,14 +47,21 @@ def test_randint():
     print(s)
 
 
+def test_getrandbits():
+    print('=== test_getrandbits ===')
+    print("{0:064b}".format(2 ** 60 - 1))
+    print("{0:064b}".format(random.getrandbits(60)))
+
+
 def main():
-    random.seed(1)  # test seed
+    # random.seed(1)  # test seed
 
     test_randrange()
     test_sample()
     test_random()
     test_uniform()
     test_randint()
+    test_getrandbits()
 
 
 if __name__ == '__main__':
