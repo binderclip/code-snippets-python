@@ -27,9 +27,19 @@ def format_number():
     print('{:.2f}'.format(123.45678))   # 会自动四舍五入
     print('{:.2%}'.format(0.12345))     # 用百分号的形式
     print('-')
-    print("{0:b}".format(0x1234))
+    print("{0:b}".format(0x1234))       # 最前面的 0 是参数的标号
     print("{0:16b}".format(0x1234))
     print("{0:016b}".format(0x1234))
+
+    print('-')
+    print("{:x}".format(2 ** 4 - 1))
+    print("{:x}".format(2 ** 8 - 10))
+    print("{:x}".format(2 ** 16 - 1))
+    print('-')
+    print("{:06x}".format(2 ** 4 - 1))
+    print("{:06x}".format(2 ** 8 - 10))
+    print("{:06x}".format(2 ** 16 - 1))
+
 
 
 def main():
@@ -39,4 +49,6 @@ def main():
 if __name__ == '__main__':
     main()
 
-# ref: http://www.runoob.com/python/att-string-format.html
+# http://www.runoob.com/python/att-string-format.html
+# https://stackoverflow.com/a/18946037/3936457
+
