@@ -41,7 +41,6 @@ def format_number():
     print("{:06x}".format(2 ** 16 - 1))
 
 
-
 def main():
     format_number()
 

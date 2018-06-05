@@ -101,6 +101,20 @@ def list_slice():
     print(l[10:20])
 
 
+def list_slice_with_step():
+    print("=== list_slice_with_step ===")
+    l = list(range(20))
+    print(l[::3])
+    print(l[1::3])
+    print(l[2::3])
+    print(l[::-1])
+    l[::3] = [0, 0, 0, 0, 0, 0, 0]
+    print(l)
+    del l[::3]
+    print(l)
+
+
+
 def list_comprehension():
     print("=== list_comprehension ===")
     # 列表推导式
@@ -117,10 +131,12 @@ def main():
     # sort_list()
     # list_index()
     # list_slice()
-    list_comprehension()
+    list_slice_with_step()
+    # list_comprehension()
 
 
 if __name__ == '__main__':
     main()
 
 # https://www.tutorialspoint.com/python/python_lists.htm
+# https://stackoverflow.com/a/9028088/3936457
