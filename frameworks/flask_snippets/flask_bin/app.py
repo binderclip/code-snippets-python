@@ -15,6 +15,18 @@ def args():
     return jsonify(request.args.to_dict())       # trans ImmutableMultiDict to dict
 
 
+@app.route("/args_type")
+def args_type():
+    # http://localhost:8080/args_type?foo=123&bar=1
+    # http://localhost:8080/args_type?foo=abc&bar=1
+    # http://localhost:8080/args_type?bar=x2s
+    d = {}
+    # 类型不匹配的时候不会报错，只会当做不存在
+    d['foo'] = request.args.get('foo', default=10, type=int)
+    d['bar'] = request.args.get('bar', type=int)
+    return jsonify(d)       # trans ImmutableMultiDict to dict
+
+
 @app.route("/post", methods=['POST'])
 def r_post():
     data = {}
