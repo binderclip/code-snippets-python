@@ -1,3 +1,4 @@
+import base64
 from pydantic import BaseModel, ValidationError, validator, constr
 
 
@@ -17,6 +18,17 @@ class UserModel(BaseModel):
         if 'password1' in values and v != values['password1']:
             raise ValueError('passwords do not match')
         return v
+
+
+class IntNextCursorDTO(BaseModel):
+    cursor: int = None
+    size: int = 10
+
+    # 用 pre 来先检查
+    @validator('cursor', pre=True)
+    def trans_str_cursor_to_int(cls, v):
+        n = base64.urlsafe_b64decode(str(v).encode('utf-8')).decode('utf-8')
+        return int(n)
 
 
 def main():
@@ -40,6 +52,10 @@ def main():
     # error validating input
     # name:
     #   must contain a space (error_type=ValueError track=ConstrainedStrValue)
+
+    next_cursor = IntNextCursorDTO(cursor='Mg==', size='10')
+    print(next_cursor)
+
 
 if __name__ == '__main__':
     main()
