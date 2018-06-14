@@ -32,10 +32,14 @@ def insert_values():
 def get_values():
     print('=== get_values ===')
     print('order_num > order_item')
-    for item in OrderItem.select().order_by(OrderItem.order_num, OrderItem.order_item):
+    query = OrderItem.select().order_by(OrderItem.order_num, OrderItem.order_item)
+    print(query.sql())
+    for item in query:
         print(f'num: {item.order_num}, item: {item.order_item}')
     print('order_item > order_num')
-    for item in OrderItem.select().order_by(OrderItem.order_item, OrderItem.order_num):
+    query = OrderItem.select().order_by(OrderItem.order_item, OrderItem.order_num)
+    print(query.sql())
+    for item in query:
         print(f'num: {item.order_num}, item: {item.order_item}')
 
 

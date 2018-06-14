@@ -201,6 +201,12 @@ def get_with_paginate():
         print(foo)
 
 
+def sql_of_query():
+    print('=== sql_of_query ===')
+    query = Foo.select().order_by(Foo.id).offset(2).limit(2)
+    print(query.sql())
+
+
 def main():
     # create_tables()
     # insert_row()
@@ -210,7 +216,7 @@ def main():
     #     get_one()
     # except DoesNotExist as e:
     #     print(e)
-    get_all()
+    # get_all()
     # get_specific_columns()
     # get_specific_rows()
     # get_ordered_rows()
@@ -221,6 +227,7 @@ def main():
     # save_row()
     # update_some()
     # delete_rows()
+    sql_of_query()
 
 
 if __name__ == '__main__':
