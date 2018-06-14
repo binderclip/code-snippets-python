@@ -12,7 +12,6 @@ class OrderItem(BaseModel):
     order_item = IntegerField()
 
 
-
 def create_db():
     db.create_tables([OrderItem])
 
