@@ -146,6 +146,10 @@ def get_specific_rows():
     query = Foo.select().where((Foo.type == FooType.TA) & (Foo.id > 1))
     for foo in query:
         print(foo)
+    print('Foo.type == FooType.TA || Foo.id > 1')
+    query = Foo.select().where((Foo.type == FooType.TA) | (Foo.id > 1))
+    for foo in query:
+        print(foo)
     print('Foo.type in (FooType.TB, FooType.TC)')
     query = Foo.select().where(Foo.type.in_([FooType.TB, FooType.TC]))
     for foo in query:
