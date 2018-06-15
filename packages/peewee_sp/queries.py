@@ -37,12 +37,12 @@ def create_tables():
 
 def insert_row():
     print('=== insert_row ===')
-    # TODO: query 是什么，query 的返回是什么
     query = Foo.insert({
         Foo.name: 'n1',
         Foo.type: FooType.TA,
     })
-    query.execute()
+    r = query.execute()
+    print(r)    # 插入的这条数据的 id
     Foo.insert(name='n2', type=FooType.TA).execute()
     Foo.insert(name='n3', type=FooType.TB).execute()
     Foo.insert(name='n4', type=FooType.TC).execute()
@@ -60,11 +60,24 @@ def insert_many_rows():
             Foo.type: FooType.TB,
         }
     ]
-    Foo.insert_many(data_source).execute()
+    r = Foo.insert_many(data_source).execute()
+    print(r)    # 插入的第一条数据的 id
 
     data = [('n10', FooType.TB), ('n10', FooType.TC)]
     fields = [Foo.name, Foo.type]
     Foo.insert_many(data, fields=fields).execute()
+
+
+def insert_or_update():
+    print("=== insert_or_update ===")
+    # http://docs.peewee-orm.com/en/latest/peewee/api.html#Insert.on_conflict
+    # Foo.insert(id=100, name='n2', type=FooType.TA).execute()
+    r = Foo.insert(id=101, name='n2', type=FooType.TA).on_conflict(update={
+        Foo.name: 'n2_',
+        Foo.type: FooType.TA,
+    }).execute()    # 返回的结果是那一行的 id，如果有插入或者有更新的话会返回，否则返回 0
+    print(r)
+    print(Foo.get_by_id(101))
 
 
 def create_row():
@@ -213,9 +226,10 @@ def sql_of_query():
 
 def main():
     # create_tables()
-    # insert_row()
-    # insert_many_rows()
+    insert_row()
+    insert_many_rows()
     # create_row()
+    # insert_or_update()
     # try:
     #     get_one()
     # except DoesNotExist as e:
@@ -231,7 +245,7 @@ def main():
     # save_row()
     # update_some()
     # delete_rows()
-    sql_of_query()
+    # sql_of_query()
 
 
 if __name__ == '__main__':
