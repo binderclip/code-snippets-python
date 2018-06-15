@@ -108,9 +108,10 @@ def save_row():
 def update_some():
     print('=== update_some ===')
     # id < 3, type = type + 1
-    # Foo.update({Foo.type: Foo.type + 1}).where(Foo.id < 3).execute()
+    r = Foo.update({Foo.type: Foo.type + 1}).where(Foo.id < 3).execute()
     # id < 3, type = 1
-    Foo.update(type=1).where(Foo.id < 3).execute()
+    r = Foo.update(type=FooType.TB).where(Foo.id < 3).execute()
+    print(r)    # 返回值为修改的行数，没有发生实际修改的不计数
 
 
 def get_one():
