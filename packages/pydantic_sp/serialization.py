@@ -6,7 +6,7 @@ from pydantic import BaseModel
 class Model(BaseModel):
     foo: int
     bar: str
-    baz: datetime.datetime
+    baz: datetime.datetime = None
 
 
 class MyEncoder(json.JSONEncoder):
@@ -23,7 +23,8 @@ class MyEncoder(json.JSONEncoder):
         return encoder(o)
 
 
-def main():
+def test_model_and_json():
+    print('=== test_model_and_json ===')
     m = Model(foo=1, bar='r', baz=datetime.datetime.now())
     print(m)
     d = m.dict()
@@ -36,6 +37,18 @@ def main():
     d['foo'] = 2
     m = Model.parse_obj(d)
     print(m)
+
+
+def test_none_field():
+    print('=== test_none_field ===')
+    m = Model(foo=1, bar='r')
+    d = m.dict()
+    print(d)
+
+
+def main():
+    test_model_and_json()
+    test_none_field()
 
 
 if __name__ == '__main__':
