@@ -10,7 +10,7 @@ def main():
     d2 = {
         'bar': 'bbb',
     }
-    d1.update(**d2)
+    d1.update(d2)
     print(d1)
     print(d1.pop('foo'))
     print(d1)

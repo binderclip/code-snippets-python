@@ -1,31 +1,29 @@
-# coding: utf-8
-
-
 def init_set():
     print("===== init_set =====")
     s = set()
     print(s)
     s2 = set([])
     print(s2)
-    s3 = set([1])
+    s3 = {1}
     print(s3)
 
 
-def union_update_and_intersection():
-    print("===== union_update_and_intersection =====")
-    s = set([1, 2, 3])
-    s2 = set([2, 3, 4])
+def union_operation():
+    print("===== union_operation =====")
+    s = {1, 2, 3}
+    s2 = {2, 3, 4}
     print(s.intersection(s2))
     print(s)
     print(s.union(s2))
     print(s)
     print(s.update(s2))
     print(s)
+    print(s - s2)
 
 
 def add_remove():
     print("===== set_add_remove =====")
-    s = set([1, 2, 3])
+    s = {1, 2, 3}
     s.add(4)
     s.remove(1)
     # s.remove(11)    # KeyError: 11
@@ -38,7 +36,7 @@ def add_remove():
 
 def main():
     init_set()
-    union_update_and_intersection()
+    union_operation()
     add_remove()
 
 
