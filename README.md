@@ -6,47 +6,36 @@
 
 ## 环境配置
 
-### 安装 Conda
+### 安装 pipenv
 
-Linux
-
+```shell
+$ pip install pipenv
+# or
+$ brew install pipenv
 ```
-$ wget https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh
-$ bash Miniconda2-latest-Linux-x86_64.sh
-```
 
-macOS
+### 配置（可选）
 
-```
-$ wget https://repo.continuum.io/miniconda/Miniconda2-latest-MacOSX-x86_64.sh
-$ bash Miniconda2-latest-MacOSX-x86_64.sh
+```shell
+# 自动补全
+$ eval "$(pipenv --completion)"
+
+# macOS 可能要在 profile 里导出 local 变量
+$ export LC_ALL=en_US.UTF-8
+$ export LANG=en_US.UTF-8
 ```
 
 ### 创建和启动虚拟环境
 
-下载代码，并创建虚拟环境
-
-```
+```shell
 $ git clone git@github.com:binderclip/code-snippets-python.git
-
-$ conda env create -f code-snippets-python/environment.yml
-$ source activate cspy2
+$ cd code-snippets-python 
+$ pipenv install
+$ pipenv shell
 ```
 
 ### 之后更新虚拟环境
 
-开发环境导出：
-
+```shell
+$ pipenv install xxx
 ```
-$ conda env export | grep -v "^prefix: " > environment.yml
-```
-
-线上对应更新：
-
-```
-$ conda env update -f environment.yml
-```
-
-## todo
-
-- [Welcome to the Click Documentation — Click Documentation (5.0)](http://click.pocoo.org/5/)
