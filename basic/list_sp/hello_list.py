@@ -128,14 +128,14 @@ def list_comprehension():
 
 def main():
     # init_list()
-    # insert_append_and_extend_list()
+    insert_append_and_extend_list()
     # remove_pop_list()
     # get_len_count_index_list()
     # sort_reverse_list()
     # sort_list()
     # list_index()
     # list_slice()
-    list_slice_with_step()
+    # list_slice_with_step()
     # list_comprehension()
 
 
@@ -144,3 +144,4 @@ if __name__ == '__main__':
 
 # https://www.tutorialspoint.com/python/python_lists.htm
 # https://stackoverflow.com/a/9028088/3936457
+# https://stackoverflow.com/questions/8785554/how-do-i-insert-a-list-at-the-front-of-another-list
