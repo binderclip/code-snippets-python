@@ -28,6 +28,10 @@ def insert_append_and_extend_list():
     print(l)
     l.extend(['m', 'n'])
     print(l)
+    l[0:0] = ['b', 'c']
+    print(l)
+    l = ['a'] + l
+    print(l)
 
 
 def remove_pop_list():
