@@ -75,9 +75,21 @@ def insert_or_update():
     r = Foo.insert(id=101, name='n2', type=FooType.TA).on_conflict(update={
         Foo.name: 'n2_',
         Foo.type: FooType.TA,
-    }).execute()    # 返回的结果是那一行的 id，如果有插入或者有更新的话会返回，否则返回 0
+    }).execute()    # 如果有插入或者有更新的话会返回那一行的 id，否则返回 0
     print(r)
     print(Foo.get_by_id(101))
+
+
+def insert_or_update2():
+    print("=== insert_or_update2 ===")
+    insert_new = False
+    try:
+        r = Foo.insert(id=100, name='n2', type=FooType.TA).execute()    # 返回插入行的 id
+        insert_new = True
+    except IntegrityError:
+        r = Foo.update(name='n2').where(Foo.id == 100).execute()    # 返回更新的行数
+    print(f'r: {r}, insert_new: {insert_new}')
+    print(Foo.get_by_id(100))
 
 
 def create_row():
@@ -227,10 +239,11 @@ def sql_of_query():
 
 def main():
     # create_tables()
-    insert_row()
-    insert_many_rows()
-    # create_row()
+    # insert_row()
+    # insert_many_rows()
+    # # create_row()
     # insert_or_update()
+    insert_or_update2()
     # try:
     #     get_one()
     # except DoesNotExist as e:
