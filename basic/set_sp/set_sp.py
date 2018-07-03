@@ -20,6 +20,11 @@ def union_operation():
     print(s)
     print(s - s2)
 
+    l2 = [3, 4, 5]
+    print(s.union(l2))
+    s.update(l2)
+    print(s)
+
 
 def add_remove():
     print("===== set_add_remove =====")
