@@ -164,6 +164,10 @@ def get_specific_rows():
     query = Foo.select().where(Foo.id < 3)
     for foo in query:
         print(foo)
+    print('not Foo.id < 3')
+    query = Foo.select().where(~(Foo.id < 3))
+    for foo in query:
+        print(foo)
     print('Foo.type == FooType.TA')
     query = Foo.select().where(Foo.type == FooType.TA)
     for foo in query:
@@ -180,6 +184,11 @@ def get_specific_rows():
     query = Foo.select().where(Foo.type.in_([FooType.TB, FooType.TC]))
     for foo in query:
         print(foo)
+    print('Foo.type not in (FooType.TB, FooType.TC)')
+    query = Foo.select().where(Foo.type.not_in([FooType.TB, FooType.TC]))
+    for foo in query:
+        print(foo)
+
 
 
 def delete_rows():
@@ -243,14 +252,14 @@ def main():
     # insert_many_rows()
     # # create_row()
     # insert_or_update()
-    insert_or_update2()
+    # insert_or_update2()
     # try:
     #     get_one()
     # except DoesNotExist as e:
     #     print(e)
     # get_all()
     # get_specific_columns()
-    # get_specific_rows()
+    get_specific_rows()
     # get_ordered_rows()
     # get_count()
     # get_with_limit_offset()
@@ -264,3 +273,6 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+# http://docs.peewee-orm.com/en/latest/peewee/querying.html
+# http://docs.peewee-orm.com/en/latest/peewee/query_operators.html
