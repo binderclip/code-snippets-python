@@ -1,4 +1,3 @@
-# coding: utf-8
 import time
 from profilehooks import profile
 
@@ -30,7 +29,7 @@ def f2():
 
 if __name__ == '__main__':
     fib = SampleClass().silly_fibonacci_example
-    print fib(10)
-    print f2()
+    print(fib(10))
+    print(f2())
 
 # ref: http://mg.pov.lt/profilehooks/
