@@ -33,6 +33,7 @@ pillow = "*"
 pyjwt = "*"
 geetest = "*"
 profilehooks = "*"
+retrying = "*"
 
 
 [dev-packages]

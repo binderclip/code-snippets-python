@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "db368149460dd229937d83b4620423071c7951fe56c600304b570d6103c81138"
+            "sha256": "b30da544c82f87dc40198f94b4fe075c267b57a3f5354af983e09ac65b5b8117"
         },
         "host-environment-markers": {
             "implementation_name": "cpython",
@@ -454,10 +454,10 @@
         },
         "pydantic": {
             "hashes": [
-                "sha256:3ec0019ab91fa723f68f9d8bced343ba4bde3bb56a118abab517ed05e6517d86",
-                "sha256:f449f2c48692240415180c5f497e80ff1327b3e59cc7216570f1aa39ad0e235a"
+                "sha256:620b8240edd885b1af716bfcf0d02666ff496f7727f227163d77bc18ed2655c6",
+                "sha256:96e404144003fc32c46ffc5d861174087bfd93707c929999d2882ce968a2f944"
             ],
-            "version": "==0.11.1"
+            "version": "==0.11.2"
         },
         "pygments": {
             "hashes": [
@@ -514,6 +514,12 @@
                 "sha256:ec22d826a36ed72a7358ff3fe56cbd4ba69dd7a6718ffd450ff0e9df7a47ce6a"
             ],
             "version": "==2.19.1"
+        },
+        "retrying": {
+            "hashes": [
+                "sha256:08c039560a6da2fe4f2c426d0766e284d3b736e355f8dd24b37367b0bb41973b"
+            ],
+            "version": "==1.3.3"
         },
         "schematics": {
             "hashes": [
