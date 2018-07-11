@@ -190,7 +190,6 @@ def get_specific_rows():
         print(foo)
 
 
-
 def delete_rows():
     print('=== delete_rows ===')
     print(Foo.select().count())
