@@ -168,6 +168,10 @@ def get_specific_rows():
     query = Foo.select().where(~(Foo.id < 3))
     for foo in query:
         print(foo)
+    print('1 < Foo.id < 3')
+    query = Foo.select().where(1 < Foo.id < 3)      # don't work as expected, it seems to be treated as "Foo.id < 3"
+    for foo in query:
+        print(foo)
     print('Foo.type == FooType.TA')
     query = Foo.select().where(Foo.type == FooType.TA)
     for foo in query:
