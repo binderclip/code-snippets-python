@@ -24,6 +24,8 @@ def union_operation():
     print(s.union(l2))
     s.update(l2)
     print(s)
+    s.update(6)
+    print(s)
 
 
 def add_remove():
