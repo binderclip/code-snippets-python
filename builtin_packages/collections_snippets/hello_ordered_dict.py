@@ -1,7 +1,8 @@
 from collections import OrderedDict
 
 
-def main():
+def test_ordered_dict():
+    print('=== test_ordered_dict ===')
     d = {'banana': 3, 'apple': 4, 'pear': 1, 'orange': 2}
     print(d)
     od = OrderedDict(sorted(d.items(), key=lambda t: t[0]))
@@ -16,6 +17,20 @@ def main():
 
     print(od.keys())
     # print(od[0])    # KeyError: 0
+
+
+def test_init_ordered_dict():
+    print('=== test_init_ordered_dict ===')
+    data = [('foo', 'fooo'), ('bar', 'baar')]
+    od = OrderedDict(data)
+    print(od)
+    print(list(od.keys()))
+    print(list(od.items()))
+
+
+def main():
+    test_ordered_dict()
+    test_init_ordered_dict()
 
 
 if __name__ == '__main__':

@@ -15,6 +15,7 @@ def main():
     user = User(**external_data)
     print(user)
     print(user.id)
+    # print(user.get('id'))   # AttributeError: 'User' object has no attribute 'get'
 
 
 if __name__ == '__main__':

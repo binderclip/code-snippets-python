@@ -126,9 +126,18 @@ def list_comprehension():
     print(l)
 
 
+def test_insert_when_traversing():
+    print("=== test_insert_when_traversing ===")
+    l = [3, 4]
+    for i in l:
+        l.insert(0, -i)
+        print(i)
+    # 会停不下来
+
+
 def main():
     # init_list()
-    insert_append_and_extend_list()
+    # insert_append_and_extend_list()
     # remove_pop_list()
     # get_len_count_index_list()
     # sort_reverse_list()
@@ -137,6 +146,7 @@ def main():
     # list_slice()
     # list_slice_with_step()
     # list_comprehension()
+    test_insert_when_traversing()
 
 
 if __name__ == '__main__':
