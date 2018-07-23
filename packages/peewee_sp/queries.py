@@ -192,6 +192,18 @@ def get_specific_rows():
     query = Foo.select().where(Foo.type.not_in([FooType.TB, FooType.TC]))
     for foo in query:
         print(foo)
+    print("Foo.name.contains('1')")
+    query = Foo.select().where(Foo.name.contains('1'))
+    for foo in query:
+        print(foo)
+    print("Foo.name.startswith('n')")
+    query = Foo.select().where(Foo.name.startswith('n'))
+    for foo in query:
+        print(foo)
+    print("Foo.name.endswith('2')")
+    query = Foo.select().where(Foo.name.endswith('2'))
+    for foo in query:
+        print(foo)
 
 
 def delete_rows():
