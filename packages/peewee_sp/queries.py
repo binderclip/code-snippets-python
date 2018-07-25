@@ -261,6 +261,15 @@ def sql_of_query():
     print(query.sql())
 
 
+def group_by_query():
+    print('=== group_by_query ===')
+    ct_field = fn.COUNT(Foo.id).alias('ct')
+    query = Foo.select(Foo.type, ct_field).group_by(Foo.type).order_by(ct_field.desc())
+    print(query.sql())
+    for row_data in query:
+        print(row_data.type, row_data.ct)
+
+
 def main():
     # create_tables()
     # insert_row()
@@ -274,7 +283,7 @@ def main():
     #     print(e)
     # get_all()
     # get_specific_columns()
-    get_specific_rows()
+    # get_specific_rows()
     # get_ordered_rows()
     # get_count()
     # get_with_limit_offset()
@@ -284,6 +293,7 @@ def main():
     # update_some()
     # delete_rows()
     # sql_of_query()
+    group_by_query()
 
 
 if __name__ == '__main__':
