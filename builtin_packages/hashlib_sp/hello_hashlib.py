@@ -1,3 +1,4 @@
+import base64
 import hashlib
 
 
@@ -7,6 +8,10 @@ def hash_string_to_int1(my_str):
 
 def hash_string_to_int2(my_str: str):
     return int(hashlib.md5(my_str.encode('utf-8')).hexdigest(), 16)
+
+
+def hash_string(my_str: str):
+    return hashlib.md5(my_str.encode('utf-8')).hexdigest()
 
 
 def print_digest1(my_str):
@@ -38,6 +43,8 @@ def main():
     print(hash_string_to_int1('hello world!'))
     print(hash_string_to_int2('hello world'))
     print(hash_string_to_int2('hello world!'))
+    print(hash_string('hello world'))
+    print(hash_string('hello world!'))
     print_digest1('hello')
     print_digest2('hello')
     print_hash_data()
