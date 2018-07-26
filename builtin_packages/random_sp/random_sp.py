@@ -53,8 +53,25 @@ def test_getrandbits():
     print("{0:064b}".format(random.getrandbits(60)))
 
 
+def test_shuffle():
+    print('=== test_shuffle ===')
+    l = list(range(10))
+    random.shuffle(l)
+    print(l)
+
+
+def test_seed():
+    print('=== test_seed ===')
+    random.seed(1)
+    print(random.randrange(5))
+    random.seed(2)
+    print(random.randrange(5))
+    random.seed(1)
+    print(random.randrange(5))
+
+
 def main():
-    # random.seed(1)  # test seed
+    random.seed(1)  # test seed
 
     test_randrange()
     test_sample()
@@ -62,6 +79,8 @@ def main():
     test_uniform()
     test_randint()
     test_getrandbits()
+    test_shuffle()
+    test_seed()
 
 
 if __name__ == '__main__':
