@@ -27,6 +27,17 @@ def main():
     print(int(c_r))
     print(c_r.__dict__)
 
+    # c_r = Color('1')  # ValueError: '1' is not a valid Color
+    # c_r = Color('RED')  # ValueError: 'RED' is not a valid Color
+
+    c_r = Color['RED']
+    print(c_r)
+    # c_r = Color['1']  # KeyError: '1'
+    # c_r = Color[1]  # KeyError: 1
+
+    c_r = Color(1)
+    print(c_r)
+
 
 if __name__ == '__main__':
     main()
