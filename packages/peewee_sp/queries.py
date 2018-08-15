@@ -270,6 +270,18 @@ def group_by_query():
         print(row_data.type, row_data.ct)
 
 
+def get_with_distinct():
+    print('=== get_with_distinct ===')
+    query = Foo.select(Foo.name, Foo.type).distinct().where(Foo.type > 1)
+    print(query.sql())
+    for row in query:
+        print(row.name, row.type)
+    query = Foo.select(Foo.name).distinct()
+    print(query.sql())
+    for row in query:
+        print(row.name)
+
+
 def main():
     # create_tables()
     # insert_row()
@@ -293,7 +305,8 @@ def main():
     # update_some()
     # delete_rows()
     # sql_of_query()
-    group_by_query()
+    # group_by_query()
+    get_with_distinct()
 
 
 if __name__ == '__main__':
@@ -301,3 +314,4 @@ if __name__ == '__main__':
 
 # http://docs.peewee-orm.com/en/latest/peewee/querying.html
 # http://docs.peewee-orm.com/en/latest/peewee/query_operators.html
+# https://stackoverflow.com/questions/17596991/python-peewee-how-to-use-distinct
