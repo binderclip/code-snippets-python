@@ -1,6 +1,3 @@
-# coding: utf-8
-
-
 class MyType(object):
     '''我的类别
     x: x 类型

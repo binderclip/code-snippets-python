@@ -1,7 +1,4 @@
-# coding: utf-8
-
-
-class A(object):
+class A:
 
     def __init__(self):
         pass
