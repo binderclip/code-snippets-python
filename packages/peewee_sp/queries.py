@@ -92,6 +92,14 @@ def insert_or_update2():
     print(Foo.get_by_id(100))
 
 
+def update_or_create():
+    print('=== update_or_create ===')
+    r = Foo.update(name='n2').where(Foo.id == 100).execute()
+    # 未考虑并发
+    if not r:
+        Foo.create(id=100, name='n2', type=FooType.TA)
+
+
 def create_row():
     print('=== create_row ===')
     foo = Foo.create(name='n5', type=FooType.TB)
@@ -289,6 +297,7 @@ def main():
     # # create_row()
     # insert_or_update()
     # insert_or_update2()
+    update_or_create()
     # try:
     #     get_one()
     # except DoesNotExist as e:
@@ -306,7 +315,7 @@ def main():
     # delete_rows()
     # sql_of_query()
     # group_by_query()
-    get_with_distinct()
+    # get_with_distinct()
 
 
 if __name__ == '__main__':
