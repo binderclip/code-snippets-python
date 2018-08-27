@@ -281,6 +281,7 @@ def group_by_query():
 def get_with_distinct():
     print('=== get_with_distinct ===')
     query = Foo.select(Foo.name, Foo.type).distinct().where(Foo.type > 1)
+    # distinct 会作用在 select 的多个字段上，没有太好的办法只 distinct 一列又带上其他的几列
     print(query.sql())
     for row in query:
         print(row.name, row.type)
@@ -297,7 +298,7 @@ def main():
     # # create_row()
     # insert_or_update()
     # insert_or_update2()
-    update_or_create()
+    # update_or_create()
     # try:
     #     get_one()
     # except DoesNotExist as e:
@@ -315,7 +316,7 @@ def main():
     # delete_rows()
     # sql_of_query()
     # group_by_query()
-    # get_with_distinct()
+    get_with_distinct()
 
 
 if __name__ == '__main__':
@@ -324,3 +325,4 @@ if __name__ == '__main__':
 # http://docs.peewee-orm.com/en/latest/peewee/querying.html
 # http://docs.peewee-orm.com/en/latest/peewee/query_operators.html
 # https://stackoverflow.com/questions/17596991/python-peewee-how-to-use-distinct
+# https://stackoverflow.com/questions/5967130/mysql-select-one-column-distinct-with-corresponding-other-columns
