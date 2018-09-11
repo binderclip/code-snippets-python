@@ -218,11 +218,11 @@ def delete_rows():
     print('=== delete_rows ===')
     print(Foo.select().count())
     foo = Foo.get_by_id(1)
-    foo.delete_instance()
+    print(foo.delete_instance())  # 返回影响的行数
 
     print(Foo.delete_by_id(4))     # 删除不存在的内容不会报错，但会返回影响的行数
 
-    Foo.delete().where(Foo.type == FooType.TB).execute()
+    print(Foo.delete().where(Foo.type == FooType.TB).execute())  # 返回影响的行数
     print(Foo.select().count())
 
 
@@ -295,7 +295,7 @@ def main():
     # create_tables()
     # insert_row()
     # insert_many_rows()
-    # # create_row()
+    # create_row()
     # insert_or_update()
     # insert_or_update2()
     # update_or_create()
@@ -313,10 +313,10 @@ def main():
     # get_or_create()
     # save_row()
     # update_some()
-    # delete_rows()
+    delete_rows()
     # sql_of_query()
     # group_by_query()
-    get_with_distinct()
+    # get_with_distinct()
 
 
 if __name__ == '__main__':
