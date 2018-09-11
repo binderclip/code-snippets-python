@@ -38,3 +38,8 @@ def r_post():
 @app.route("/redirect/with_args")
 def redirect_with_args():
     return redirect(url_for('args', **request.args))
+
+
+@app.route('/ua')
+def ua():
+    return jsonify({'ua': request.user_agent.string})
