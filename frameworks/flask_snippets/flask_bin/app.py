@@ -43,3 +43,8 @@ def redirect_with_args():
 @app.route('/ua')
 def ua():
     return jsonify({'ua': request.user_agent.string})
+
+
+@app.route('/headers')
+def headers():
+    return jsonify(dict(request.headers))
