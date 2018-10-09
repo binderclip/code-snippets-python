@@ -28,9 +28,21 @@ def test_init_ordered_dict():
     print(list(od.items()))
 
 
+def test_append_ordered_dict():
+    print('=== test_append_ordered_dict ===')
+    od = OrderedDict()
+    od['foo'] = 1
+    od['bar'] = 1
+    od['baz'] = 1
+    od['foo'] = 2
+    print(od)
+    print(list(od.keys()))
+
+
 def main():
     test_ordered_dict()
     test_init_ordered_dict()
+    test_append_ordered_dict()
 
 
 if __name__ == '__main__':
