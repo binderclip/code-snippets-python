@@ -13,18 +13,17 @@ def union_operation():
     s = {1, 2, 3}
     s2 = {2, 3, 4}
     print(s.intersection(s2))
-    print(s)
+    print(s & s2)
     print(s.union(s2))
-    print(s)
+    print(s | s2)
+    print(s - s2)
     print(s.update(s2))
     print(s)
-    print(s - s2)
-
     l2 = [3, 4, 5]
     print(s.union(l2))
     s.update(l2)
     print(s)
-    s.update(6)
+    s.add(6)
     print(s)
 
 
@@ -49,3 +48,7 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+
+# https://docs.python.org/2/library/sets.html
+# https://www.programiz.com/python-programming/set
