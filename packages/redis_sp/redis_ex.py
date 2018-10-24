@@ -52,10 +52,10 @@ def ttl():
 
 
 def main():
-    setex()
-    set_ex()
+    # setex()
+    # set_ex()
     hsetex()
-    ttl()
+    # ttl()
 
 
 if __name__ == '__main__':

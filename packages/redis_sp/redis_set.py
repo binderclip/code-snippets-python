@@ -4,16 +4,12 @@ r = redis.StrictRedis(host='localhost', port=6379, db=0)
 
 
 def main():
-    key = 'foo'
-    print(r.get(key))
-    r.set(key, 'a', xx=True)
-    print(r.get(key))
-    r.set(key, 'b', nx=True)
-    print(r.get(key))
-    r.set(key, 'c', nx=True)
-    print(r.get(key))
-    r.set(key, 'd', xx=True)
-    print(r.get(key))
+    key = 'foo_set'
+    r.sadd(key, 'a')
+    r.sadd(key, 1)
+    print(r.sismember(key, '1'))
+    print(r.scard(key))
+    print(r.smembers(key))
 
 
 if __name__ == '__main__':
