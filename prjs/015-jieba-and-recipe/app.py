@@ -31,16 +31,20 @@ def main():
     jieba.del_word('炒鱿鱼')
     jieba.del_word('手上')
     jieba.del_word('手版')
+    jieba.del_word('烤鸡')
+    jieba.del_word('烧鸡')
+    jieba.del_word('炖鸡')
+    jieba.del_word('咖喱鸡')
 
     for title in titles:
         cut_txt(title, 'c2')
 
-    for txt, data in list(recipe_title_data.items())[340:360]:
+    for txt, data in list(recipe_title_data.items())[1175:1200]:
         t1 = data["c1"]
         t2 = data["c2"]
         r = '==' if t1 == t2 else 'xx'
         print(f'{txt} -> {t1} ## {t2} {r}')
-    # print(len(recipe_title_data))
+    print(len(recipe_title_data))
 
 
 if __name__ == '__main__':
