@@ -42,6 +42,9 @@ def main():
     # pydantic.error_wrappers.ValidationError: 1 validation error
     # __obj__
     #   BB expected dict not AA (type=type_error)
+    bb3 = BB.parse_obj({'x': 'bb3', 'y': A()})
+    print(bb3)
+    print(bb3.dict())
 
 
 if __name__ == '__main__':
