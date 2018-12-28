@@ -13,7 +13,6 @@ class BigIndex(BaseModel):
 
     class Meta:
         indexes = (
-            # create a unique on from/to/date
             (('my_integer', 'my_char', ), False),
         )
 
