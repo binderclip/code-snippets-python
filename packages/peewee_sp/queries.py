@@ -233,7 +233,12 @@ def delete_rows():
 
 def get_ordered_rows():
     print('=== get_ordered_rows ===')
+    print('Foo.id.desc()')
     query = Foo.select().order_by(Foo.id.desc())
+    for foo in query:
+        print(foo)
+    print('fn.Rand()')
+    query = Foo.select().order_by(fn.Rand())
     for foo in query:
         print(foo)
 
@@ -310,8 +315,8 @@ def main():
     #     print(e)
     # get_all()
     # get_specific_columns()
-    get_specific_rows()
-    # get_ordered_rows()
+    # get_specific_rows()
+    get_ordered_rows()
     # get_count()
     # get_with_limit_offset()
     # get_with_paginate()
