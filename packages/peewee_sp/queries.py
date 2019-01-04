@@ -212,6 +212,11 @@ def get_specific_rows():
     query = Foo.select().where(Foo.name.endswith('2'))
     for foo in query:
         print(foo)
+    print("fn.length(Foo.name) > 2")
+    query = Foo.select().where(fn.length(Foo.name) > 2)  # 一个汉字 length 的结果为 3
+    for foo in query:
+        print(foo)
+
 
 
 def delete_rows():
@@ -305,7 +310,7 @@ def main():
     #     print(e)
     # get_all()
     # get_specific_columns()
-    # get_specific_rows()
+    get_specific_rows()
     # get_ordered_rows()
     # get_count()
     # get_with_limit_offset()
@@ -313,7 +318,7 @@ def main():
     # get_or_create()
     # save_row()
     # update_some()
-    delete_rows()
+    # delete_rows()
     # sql_of_query()
     # group_by_query()
     # get_with_distinct()
@@ -326,3 +331,4 @@ if __name__ == '__main__':
 # http://docs.peewee-orm.com/en/latest/peewee/query_operators.html
 # https://stackoverflow.com/questions/17596991/python-peewee-how-to-use-distinct
 # https://stackoverflow.com/questions/5967130/mysql-select-one-column-distinct-with-corresponding-other-columns
+# https://www.reddit.com/r/Python/comments/2ruvu5/how_can_i_use_the_lengthlen_function_on_the_where/
