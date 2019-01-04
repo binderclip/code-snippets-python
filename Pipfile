@@ -33,6 +33,7 @@ profilehooks = "*"
 retrying = "*"
 jieba = "*"
 tqdm = "*"
+packaging = "*"
 
 [dev-packages]
 pytest = "*"
