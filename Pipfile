@@ -34,6 +34,7 @@ retrying = "*"
 jieba = "*"
 tqdm = "*"
 packaging = "*"
+pypinyin = "*"
 
 [dev-packages]
 pytest = "*"
