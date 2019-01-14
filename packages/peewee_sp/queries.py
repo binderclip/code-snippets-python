@@ -288,6 +288,18 @@ def group_by_query():
         print(row_data.type, row_data.ct)
 
 
+def group_by_query2():
+    print('=== group_by_query2 ===')
+
+    ct_field = fn.COUNT(Foo.id).alias('ct')
+    subquery = Foo.select(Foo.type.alias('type'), ct_field).group_by(Foo.type).alias('foo_ct')
+    query = Foo.select(subquery.c.type, subquery.c.ct).from_(subquery).where(subquery.c.ct > 1).order_by(subquery.c.ct.desc())
+
+    print(query.sql())
+    for row_data in query:
+        print(row_data.type, row_data.ct)
+
+
 def get_with_distinct():
     print('=== get_with_distinct ===')
     query = Foo.select(Foo.name, Foo.type).distinct().where(Foo.type > 1)
@@ -316,7 +328,7 @@ def main():
     # get_all()
     # get_specific_columns()
     # get_specific_rows()
-    get_ordered_rows()
+    # get_ordered_rows()
     # get_count()
     # get_with_limit_offset()
     # get_with_paginate()
@@ -326,6 +338,7 @@ def main():
     # delete_rows()
     # sql_of_query()
     # group_by_query()
+    group_by_query2()
     # get_with_distinct()
 
 
@@ -337,3 +350,4 @@ if __name__ == '__main__':
 # https://stackoverflow.com/questions/17596991/python-peewee-how-to-use-distinct
 # https://stackoverflow.com/questions/5967130/mysql-select-one-column-distinct-with-corresponding-other-columns
 # https://www.reddit.com/r/Python/comments/2ruvu5/how_can_i_use_the_lengthlen_function_on_the_where/
+# https://stackoverflow.com/questions/21297971/can-peewee-nest-select-queries-such-that-the-outer-query-selects-on-an-aggregate
