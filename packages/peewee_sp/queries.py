@@ -292,7 +292,7 @@ def group_by_query2():
     print('=== group_by_query2 ===')
 
     ct_field = fn.COUNT(Foo.id).alias('ct')
-    subquery = Foo.select(Foo.type.alias('type'), ct_field).group_by(Foo.type).alias('foo_ct')
+    subquery = Foo.select(Foo.type, ct_field).group_by(Foo.type)
     query = Foo.select(subquery.c.type, subquery.c.ct).from_(subquery).where(subquery.c.ct > 1).order_by(subquery.c.ct.desc())
 
     print(query.sql())
