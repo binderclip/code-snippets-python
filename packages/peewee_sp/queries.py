@@ -300,6 +300,15 @@ def group_by_query2():
         print(row_data.type, row_data.ct)
 
 
+def group_by_query_and_sum():
+    print('=== group_by_query_and_sum ===')
+    sum_field = fn.SUM(Foo.id).alias('sum')  # 没有实际意义
+    query = Foo.select(Foo.type, sum_field).group_by(Foo.type)
+    print(query.sql())
+    for row_data in query:
+        print(row_data.type, row_data.sum)
+
+
 def get_with_distinct():
     print('=== get_with_distinct ===')
     query = Foo.select(Foo.name, Foo.type).distinct().where(Foo.type > 1)
@@ -338,7 +347,8 @@ def main():
     # delete_rows()
     # sql_of_query()
     # group_by_query()
-    group_by_query2()
+    # group_by_query2()
+    group_by_query_and_sum()
     # get_with_distinct()
 
 
