@@ -81,11 +81,16 @@ def sort_reverse_list():
     print(l)
 
 
+def _sort_func(x):
+    return x[0] + x[1]
+
+
 def sort_list():
     print("=== sort_list ===")
     l = [(1, 2), (3, 1), (2, 3)]
     print(sorted(l, key=lambda x: x[1]))
     print(sorted(l, key=lambda x: x[0]))
+    print(sorted(l, key=_sort_func))
 
 
 def list_index():
@@ -141,12 +146,12 @@ def main():
     # remove_pop_list()
     # get_len_count_index_list()
     # sort_reverse_list()
-    # sort_list()
+    sort_list()
     # list_index()
     # list_slice()
     # list_slice_with_step()
     # list_comprehension()
-    test_insert_when_traversing()
+    # test_insert_when_traversing()
 
 
 if __name__ == '__main__':
