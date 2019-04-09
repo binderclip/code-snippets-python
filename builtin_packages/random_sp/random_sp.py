@@ -73,14 +73,14 @@ def test_seed():
 def main():
     random.seed(1)  # test seed
 
-    test_randrange()
-    test_sample()
-    test_random()
-    test_uniform()
+    # test_randrange()
+    # test_sample()
+    # test_random()
+    # test_uniform()
     test_randint()
-    test_getrandbits()
-    test_shuffle()
-    test_seed()
+    # test_getrandbits()
+    # test_shuffle()
+    # test_seed()
 
 
 if __name__ == '__main__':
