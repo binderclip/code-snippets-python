@@ -4,11 +4,11 @@ import inspect
 
 # 方法原本的属性会被覆盖
 def check_is_admin_1(f):
-    def wrapper(*args, **kwargs):
+    def r(*args, **kwargs):
         if kwargs.get('username') != 'admin':
             raise Exception("This user is not allowed to get food")
         return f(*args, **kwargs)
-    return wrapper
+    return r
 
 
 def check_is_admin(f):
@@ -28,7 +28,7 @@ class Store(object):
             'apple': 3,
         }
 
-    @check_is_admin
+    @check_is_admin_1
     def get_food(self, username, food):
         return self.storage.get(food)
 
