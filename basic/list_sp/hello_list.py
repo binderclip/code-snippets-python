@@ -109,6 +109,11 @@ def list_slice():
     print(l[:-1])
     print(l[10:20])
 
+    ls = l[:1]
+    ls[0] = 2
+    print(ls)
+    print(l)  # 改变 ls 不会改变 l
+
 
 def list_slice_with_step():
     print("=== list_slice_with_step ===")
@@ -121,7 +126,6 @@ def list_slice_with_step():
     print(l)
     del l[::3]
     print(l)
-
 
 
 def list_comprehension():
@@ -146,9 +150,9 @@ def main():
     # remove_pop_list()
     # get_len_count_index_list()
     # sort_reverse_list()
-    sort_list()
+    # sort_list()
     # list_index()
-    # list_slice()
+    list_slice()
     # list_slice_with_step()
     # list_comprehension()
     # test_insert_when_traversing()
