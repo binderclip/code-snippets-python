@@ -1,4 +1,4 @@
-from urllib.parse import urlencode
+from urllib.parse import urlencode, unquote, quote
 
 
 def main():
@@ -10,6 +10,9 @@ def main():
 
     params = {'bwm': '大西瓜'}
     print(urlencode(params))
+
+    print(quote('大西瓜'))
+    print(unquote(quote('大西瓜')))
 
 
 if __name__ == '__main__':
