@@ -5,7 +5,7 @@ def main():
     for mask in masks:
         cnt += 2 ** (32 - mask)
     print(cnt)
-    # 344055276 亿，和网络上给出的数字基本吻合
+    # 344055276 3.4 亿，和网络上搜索到的数字基本吻合
 
 
 if __name__ == '__main__':
