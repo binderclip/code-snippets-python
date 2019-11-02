@@ -40,10 +40,22 @@ def add_remove():
     print(s)
 
 
+def set_and_tuple():
+    print("===== set_and_tuple =====")
+    s = set()
+    t1, t2 = (1, 2), (3, 4)
+    t3, t4 = (1, 2), (3, 4)
+    t5 = (4, 5)
+    s.add(t1)
+    s.add(t2)
+    print(t1 in s, t2 in s, t3 in s, t4 in s, t5 in s)
+
+
 def main():
-    init_set()
-    union_operation()
-    add_remove()
+    # init_set()
+    # union_operation()
+    # add_remove()
+    set_and_tuple()
 
 
 if __name__ == '__main__':
