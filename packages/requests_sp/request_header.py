@@ -4,6 +4,7 @@ import requests
 def main():
     headers = {
         "User-Agent": "Mozilla/5.0 (iPhone; CPU iOS 11.4 like Mac OS X)",
+        "Cookie": "foo=bar; baz=qux;"
     }
     r = requests.get('https://httpbin.org/headers', headers=headers)
     print(r.json())
