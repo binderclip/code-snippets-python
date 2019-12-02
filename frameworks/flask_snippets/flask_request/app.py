@@ -11,6 +11,7 @@ def get():
 
 @app.route("/get", methods=['GET'])
 def app_get():
+    print(request.headers)
     return jsonify({
         "args": request.args,
     })
